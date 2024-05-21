@@ -1,0 +1,12 @@
+@use 'custom';
+
+// import sections
+@use 'sections/navbar';
+@use 'sections/hero-section';
+@use 'sections/ambition';
+@use 'sections/features';
+
+// import components
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';

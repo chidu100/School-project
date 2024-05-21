@@ -1,0 +1,40 @@
+@use '../custom' as *;
+
+.display-3 {
+    font-family: 'Poppins', sans-serif;
+
+    &--title {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        display: inline-block;
+        background-image: linear-gradient(to right, $primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
+
+
+    }
+}
+
+// GRADIENT BG 
+.gradient  {
+    background: linear-gradient(to right, rgba(#00aaff, 0.95), rgba(#00ffdd, 0.95));
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+// Heading line 
+.heading-line {
+    width: 300px; 
+    height: 5px; 
+    background-color: #f85a40; 
+    margin: 0 auto;
+}

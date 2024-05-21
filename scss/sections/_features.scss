@@ -1,0 +1,10 @@
+@use '../custom' as *;
+
+
+.features, .contact, .form-section {
+    padding: 60px 0;
+}
+
+.features .card, .news-events .card {
+    margin-bottom: 30px;
+}
