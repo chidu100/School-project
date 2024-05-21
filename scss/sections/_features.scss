@@ -1,6 +1,8 @@
 @use '../custom' as *;
 
-
+.features {
+    background-color: $gray-200;
+}
 .features, .contact, .form-section {
     padding: 60px 0;
 }

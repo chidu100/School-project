@@ -12018,6 +12018,18 @@ textarea.form-control-lg {
   max-width: 100%;
 }
 
+.features {
+  background-color: #e9ecef;
+}
+
+.features, .contact, .form-section {
+  padding: 60px 0;
+}
+
+.features .card, .news-events .card {
+  margin-bottom: 30px;
+}
+
 .btn-rounded {
   position: relative;
   padding: 10px 20px;
