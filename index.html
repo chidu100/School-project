@@ -185,7 +185,7 @@
           <div class="row">
               <div class="col-md-4">
                   <div class="card">
-                      <img src="/images/features/Personalized-learning.jpg" class="card-img-top" alt="...">
+                      <img src="/images/features/features1.jpg" class="card-img-top" alt="..." loading="lazy">
                       <div class="card-body">
                           <h5 class="card-title">Personalized Learning</h5>
                           <p class="card-text">Tailored education plans for every student.</p>
@@ -194,7 +194,7 @@
               </div>
               <div class="col-md-4">
                   <div class="card">
-                      <img src="/images/features/features2.jpg" class="card-img-top" alt="...">
+                      <img src="/images/features/features2.jpg" class="card-img-top" alt="..." loading="lazy">
                       <div class="card-body">
                           <h5 class="card-title">State-of-the-Art Facilities</h5>
                           <p class="card-text">Modern classrooms, labs, and sports facilities.</p>
@@ -203,15 +203,43 @@
               </div>
               <div class="col-md-4">
                   <div class="card">
-                      <img src="/images/features/features3.jpg" class="card-img-top" alt="...">
+                      <img src="/images/features/features3.jpg" class="card-img-top" alt="..." loading="lazy">
                       <div class="card-body">
                           <h5 class="card-title">Holistic Development</h5>
                           <p class="card-text">Focus on academics, sports, and arts.</p>
                       </div>
                   </div>
               </div>
-          </div>
-      </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <img src="/images/features/features4.jpg" class="card-img-top" alt="..." loading="lazy">
+                      <div class="card-body">
+                          <h5 class="card-title">Technology Integration</h5>
+                          <p class="card-text">We use educational tools, digital resources, online platforms, and multimedia to enhance teaching and personalized learning.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <img src="/images/features/features5.jpg" class="card-img-top" alt="..." loading="lazy">
+                      <div class="card-body">
+                          <h5 class="card-title">Support Services</h5>
+                          <p class="card-text">We offer support services like counseling, tutoring, and special education to ensure student success and well-being.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <img src="/images/features/features6.jpg" class="card-img-top" alt="..." loading="lazy">
+                      <div class="card-body">
+                          <h5 class="card-title">Assessment and Evaluation Practices</h5>
+                          <p class="card-text">We prioritize assessment to track student progress, inform teaching decisions, and ensure academic success.</p>
+                      </div>
+                  </div>
+              </div>
+               
+              </div>
+              </div>
   </section>
 
   </main>
@@ -225,5 +253,24 @@
 
 
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
+</script>
 </body>
 </html>
