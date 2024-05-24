@@ -1,0 +1,38 @@
+@use '../custom' as *;
+
+.reason-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer;
+
+    .icons{
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: white; 
+    color: #007bff; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center; 
+    }
+}
+
+.reason-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.reason-box:hover .icons{
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    transition: all 0.3s ease;
+}
+
