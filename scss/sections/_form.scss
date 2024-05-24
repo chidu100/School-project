@@ -1,0 +1,56 @@
+@use '../custom' as *;
+
+
+.form-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+
+    .fancy-form {
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .form-group {
+            padding: 0 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+            }
+        }
+
+        textarea.form-control {
+            resize: vertical;
+        }
+    }
+}

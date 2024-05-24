@@ -12074,6 +12074,10 @@ textarea.form-control-lg {
   color: #777;
 }
 
+.reason {
+  margin-top: 50px;
+}
+
 .reason-box {
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -12107,6 +12111,97 @@ textarea.form-control-lg {
   color: white;
   border: 1px solid #007bff;
   transition: all 0.3s ease;
+}
+
+.founder {
+  background-color: rgb(218, 214, 214);
+  margin-top: 150px;
+}
+.founder .border {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 38px 41px 28px -17px rgba(0, 0, 0, 0.1);
+  height: 50%;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 80px 0;
+}
+.founder .border .img-fluid {
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: white;
+  color: #007bff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50px;
+}
+.founder .border .img-fluid img {
+  width: 100%;
+  height: 100%;
+}
+
+.form-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+.form-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.form-section .fancy-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.form-section .fancy-form .form-group {
+  padding: 0 15px;
+  margin-bottom: 1.5rem;
+}
+.form-section .fancy-form .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.form-section .fancy-form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.form-section .fancy-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+.form-section .fancy-form textarea.form-control {
+  resize: vertical;
+}
+
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+}
+.back-to-top i {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .btn-rounded {
