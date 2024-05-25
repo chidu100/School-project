@@ -1,0 +1,40 @@
+@use '../custom' as *;
+
+.academics-section .container {
+    margin-top: 150px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1), 
+                0 8px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.academics-section h2 {
+    margin-bottom: 30px;
+}
+
+.academics-section h3 {
+    margin-top: 30px;
+}
+
+.academics-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.academics-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.academics-section ul li {
+    margin-bottom: 10px;
+}
+
+.academics-section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}

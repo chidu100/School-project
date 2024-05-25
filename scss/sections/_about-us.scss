@@ -1,0 +1,41 @@
+@use '../custom' as *;
+
+
+.about-section .style {
+    margin-top: 150px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1), 
+                0 8px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.about-section h2 {
+    margin-bottom: 30px;
+}
+
+.about-section h3 {
+    margin-top: 30px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+}
+
+.about-section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
