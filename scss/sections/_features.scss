@@ -1,14 +1,15 @@
 @use '../custom' as *;
 
 .features {
-    background-color: $gray-200;
-    transition: transform 0.3s ease;
+  background-color: #f8f9fa; /* Light gray background */
+  transition: transform 0.3s ease;
+  padding-bottom: 2rem;
+  transition: .5s ease;
 }
 
 .features .row.text-center {
   padding-bottom: 2rem;
 }
-
 
 .features .heading-line {
   width: 6rem;
@@ -18,12 +19,11 @@
 }
 
 .features .ambition__para {
-    margin: 1.5rem auto;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #777;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #777;
 }
-
 
 .card {
   background: #fff;
@@ -35,9 +35,8 @@
 }
 
 .card:hover {
-//   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card-img-top {

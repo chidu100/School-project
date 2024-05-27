@@ -11861,16 +11861,16 @@ textarea.form-control-lg {
 .underline-hover {
   position: relative;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 .underline-hover::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 70%;
   height: 2px;
   bottom: 0;
-  left: 0;
+  left: 10px;
   background-color: #f85a40;
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -12026,6 +12026,11 @@ textarea.form-control-lg {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1), 0 8px 40px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
 }
+@media (max-width: 575.98px) {
+  .about-section .style {
+    margin-top: 70px;
+  }
+}
 
 .about-section h2 {
   margin-bottom: 30px;
@@ -12093,8 +12098,10 @@ textarea.form-control-lg {
 }
 
 .features {
-  background-color: #e9ecef;
+  background-color: #f8f9fa; /* Light gray background */
   transition: transform 0.3s ease;
+  padding-bottom: 2rem;
+  transition: 0.5s ease;
 }
 
 .features .row.text-center {
@@ -12126,7 +12133,7 @@ textarea.form-control-lg {
 
 .card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card-img-top {
@@ -12189,7 +12196,12 @@ textarea.form-control-lg {
 
 .founder {
   background-color: rgb(218, 214, 214);
-  margin-top: 150px;
+  margin-top: 120px;
+}
+@media (max-width: 575.98px) {
+  .founder {
+    margin-top: 15px;
+  }
 }
 .founder .border {
   border: 1px solid #ddd;

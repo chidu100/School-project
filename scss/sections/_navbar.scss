@@ -9,16 +9,16 @@
   .underline-hover {
     position: relative;
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 .underline-hover::before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: 2px;
     bottom: 0;
-    left: 0;
+    left: 10px;
     background-color: #f85a40;
     transform: scaleX(0);
     transform-origin: bottom right;
