@@ -79,7 +79,6 @@
        <div class="container">
          <div class="row text-center">
            <h1 class="display-3 fw-bold mt-5">Our Goals and Ambitions</h1>
-           <div class="heading-line mb-1"></div>
            <p class="ambition__para">At our institution, we are committed to fostering an environment of excellence and achievement across all facets of our educational community. Here are some of the key aspirations and objectives we aim to achieve</p>
          </div>
        </div>
@@ -182,7 +181,6 @@
         <div class="container">
           <div class="row text-center">
             <h1 class="display-3 fw-bold mt-5">Features</h1>
-            <div class="heading-line mb-1"></div>
             <p class="ambition__para">The unique elements that make our educational institution stand out. These are the distinguishing attributes that define our school's identity and educational experience</p>
           </div>
         </div>
@@ -253,7 +251,6 @@
       <div class="container">
         <div class="row text-center">
           <h1 class="display-3 fw-bold mt-5">Why You Should Choose Our School?</h1>
-          <div class="heading-line mb-1"></div>
           <p class="ambition__para">Choose our school for an unparalleled educational experience where innovation meets tradition. Our unique blend of personalized learning paths, cutting-edge technology, and a vibrant community culture ensures every student not only excels academically but also grows as a confident, creative, and compassionate individual.</p>
         </div>
       </div>
@@ -297,6 +294,92 @@
                   </div>
     </section>
    <!--END START REASON -->
+
+   <!-- Gallery -->
+   <section class="image-gallery">
+    <input type="radio" name="photo" id="check1" checked>
+    <input type="radio" name="photo" id="check2">
+    <input type="radio" name="photo" id="check3">
+    <input type="radio" name="photo" id="check4">
+
+    <div class="checked">
+        <h1>IMAGE GALLERY</h1>
+        <div class="top-content">
+            <h3>Photo Gallery</h3>
+            <label for="check1">All Photos</label>
+            <label for="check2">Activities</label>
+            <label for="check3">Music</label>
+            <label for="check4">Students</label>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="pic activities">
+                <img src="/images/gallery/activities1.jpg">
+            </div>
+            <div class="pic music">
+                <img src="/images/gallery/music1.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people1.jpg">
+            </div>
+            <div class="pic activities">
+                <img src="/images/gallery/activities2.jpg">
+            </div>
+            <div class="pic music">
+                <img src="/images/gallery/music2.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people2.jpg">
+            </div>
+            <div class="pic activities">
+                <img src="/images/gallery/activities3.jpg">
+            </div>
+            <div class="pic music">
+                <img src="/images/gallery/music3.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people3.jpg">
+            </div>
+            <div class="pic activities">
+                <img src="/images/gallery/activities4.jpg">
+            </div>
+            <div class="pic music">
+                <img src="/images/gallery/music4.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people4.jpg">
+            </div>
+            <div class="pic activities">
+                <img src="/images/gallery/activities5.jpg">
+            </div>
+            <div class="pic music">
+                <img src="/images/gallery/music5.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people5.jpg">
+            </div>
+            <div class="pic activities">
+                <img src="/images/gallery/activities6.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people6.jpg">
+            </div>
+            <div class="pic activities">
+                <img src="/images/gallery/activities7.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people7.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people8.jpg">
+            </div>
+            <div class="pic students">
+                <img src="/images/gallery/people9.jpg">
+            </div>
+        </div>
+    </div>
+  </section>
+   <!-- End Gallery -->
 
     <!-- Form Section -->
     <section class="form-section">
@@ -360,6 +443,16 @@
     observer.observe(card);
   });
 });
+
+document.querySelectorAll('input[name="category"]').forEach((input) => {
+  input.addEventListener('change', function() {
+    document.querySelectorAll('.category').forEach((category) => {
+      category.style.display = 'none';
+    });
+    document.querySelector(`.category.${this.value}`).style.display = 'block';
+  });
+});
+
 
 </script>
 </body>
