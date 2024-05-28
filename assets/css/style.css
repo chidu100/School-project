@@ -12152,11 +12152,15 @@ input {
   display: none;
 }
 
+.image-gallery {
+  background-color: #f9f9f9;
+  margin-top: 150px;
+  padding-top: 0px;
+}
+
 .checked {
   width: 100%;
   text-align: center;
-  background-color: #f9f9f9;
-  margin-top: 100px;
 }
 
 h1 {
@@ -12200,7 +12204,7 @@ h1::before {
   box-shadow: 3px 3px 5px rgba(46, 42, 42, 0.3);
 }
 
-h3 {
+.add-back {
   height: 100%;
   background-image: linear-gradient(to right, #00aaff, #00ffdd);
   line-height: 60px;
@@ -12334,6 +12338,42 @@ label:hover {
   transition: 0s;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .top-content {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+  .top-content h3, .top-content label {
+    padding: 10px 20px;
+  }
+  h3 {
+    padding: 0 20px;
+  }
+  label {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 480px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+  .pic {
+    height: auto;
+  }
+  .pic img {
+    height: auto;
+  }
+}
 .reason {
   margin-top: 50px;
 }
