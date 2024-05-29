@@ -152,7 +152,7 @@ label:hover {
 #check2:checked ~ .checked .photo-gallery .music, 
 #check2:checked ~ .checked .photo-gallery .students{
  opacity: 1;
- transform: scale(1);
+ transform: scale(0);
  position: absolute;
  transition: 0s;
 }
@@ -167,7 +167,7 @@ label:hover {
 #check3:checked ~ .checked .photo-gallery .activities, 
 #check3:checked ~ .checked .photo-gallery .students{
  opacity: 1;
- transform: scale(1);
+ transform: scale(0);
  position: absolute;
  transition: 0s;
 }
@@ -182,7 +182,7 @@ label:hover {
 #check4:checked ~ .checked .photo-gallery .activities, 
 #check4:checked ~ .checked .photo-gallery .music{
  opacity: 1;
- transform: scale(1);
+ transform: scale(0);
  position: absolute;
  transition: 0s;
 }

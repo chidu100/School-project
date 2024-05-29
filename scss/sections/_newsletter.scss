@@ -18,3 +18,24 @@
 .subscribe-section .btn {
     border-radius: 0 20px 20px 0;
 }
+
+.sponsors-section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Sponsors Section Specific Styling */
+.sponsors-section .sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsors-section .sponsor-logos img {
+    max-width: 150px;
+    max-height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
