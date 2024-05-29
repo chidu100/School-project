@@ -12154,8 +12154,8 @@ input {
 
 .image-gallery {
   background-color: #f9f9f9;
-  margin-top: 150px;
-  padding-top: 0px;
+  margin-top: 100px;
+  padding-top: 50px;
 }
 
 .checked {
@@ -12230,9 +12230,6 @@ label:hover {
 .photo-gallery {
   width: 90%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
 }
 
 .pic {
@@ -12242,6 +12239,7 @@ label:hover {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
+  overflow: hidden;
 }
 
 .pic img {
@@ -12249,6 +12247,7 @@ label:hover {
   height: 100%;
   border-radius: 10px;
   transition: 0.5s;
+  object-fit: cover;
 }
 
 .pic::before {
@@ -12305,7 +12304,7 @@ label:hover {
 #check2:checked ~ .checked .photo-gallery .music,
 #check2:checked ~ .checked .photo-gallery .students {
   opacity: 1;
-  transform: scale(0);
+  transform: scale(1);
   position: absolute;
   transition: 0s;
 }
@@ -12319,7 +12318,7 @@ label:hover {
 #check3:checked ~ .checked .photo-gallery .activities,
 #check3:checked ~ .checked .photo-gallery .students {
   opacity: 1;
-  transform: scale(0);
+  transform: scale(1);
   position: absolute;
   transition: 0s;
 }
@@ -12333,21 +12332,13 @@ label:hover {
 #check4:checked ~ .checked .photo-gallery .activities,
 #check4:checked ~ .checked .photo-gallery .music {
   opacity: 1;
-  transform: scale(0);
+  transform: scale(1);
   position: absolute;
   transition: 0s;
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .photo-gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 @media (max-width: 768px) {
-  .photo-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .top-content {
     flex-direction: column;
     height: auto;
@@ -12356,17 +12347,11 @@ label:hover {
   .top-content h3, .top-content label {
     padding: 10px 20px;
   }
-  h3 {
-    padding: 0 20px;
-  }
   label {
     margin: 10px 0;
   }
 }
 @media (max-width: 480px) {
-  .photo-gallery {
-    grid-template-columns: 1fr;
-  }
   .pic {
     height: auto;
   }
