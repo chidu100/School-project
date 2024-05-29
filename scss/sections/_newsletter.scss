@@ -1,0 +1,20 @@
+@use '../custom' as *;
+
+
+.subscribe-section {
+    padding: 60px 0;
+    background-color: #abafb379;
+}
+
+.subscribe-section .input-group {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.subscribe-section .form-control {
+    border-radius: 20px 0 0 20px;
+}
+
+.subscribe-section .btn {
+    border-radius: 0 20px 20px 0;
+}
