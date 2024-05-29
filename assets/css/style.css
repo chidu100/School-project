@@ -12549,48 +12549,22 @@ label:hover {
   height: 100%;
 }
 
-.form-section {
+.subscribe-section {
   padding: 60px 0;
-  background-color: #f9f9f9;
+  background-color: rgba(171, 175, 179, 0.4745098039);
 }
-.form-section .container {
-  max-width: 800px;
+
+.subscribe-section .input-group {
+  max-width: 700px;
   margin: 0 auto;
-  background: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.form-section h2 {
-  margin-bottom: 30px;
-  font-size: 2rem;
+
+.subscribe-section .form-control {
+  border-radius: 20px 0 0 20px;
 }
-.form-section .fancy-form .form-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
-}
-.form-section .fancy-form .form-group {
-  padding: 0 15px;
-  margin-bottom: 1.5rem;
-}
-.form-section .fancy-form .col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-.form-section .fancy-form .form-control {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-}
-.form-section .fancy-form .form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
-}
-.form-section .fancy-form textarea.form-control {
-  resize: vertical;
+
+.subscribe-section .btn {
+  border-radius: 0 20px 20px 0;
 }
 
 .back-to-top {
