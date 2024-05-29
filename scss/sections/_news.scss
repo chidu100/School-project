@@ -1,0 +1,64 @@
+@use '../custom' as *;
+
+.news-section .container {
+    margin-top: 150px;
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    @include media-breakpoint-down(sm) {
+        margin-top: 70px;
+    }
+}
+
+.news-section h1 {
+    margin-bottom: 30px;
+}
+
+.news-section h3 {
+    margin-top: 30px;
+}
+
+.news-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.news-section ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.news-section ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.news-section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Colorful List Items */
+.news-section ul li:before {
+    content: '•';
+    font-size: 1.5rem;
+    position: absolute;
+    margin-left: -20px;
+}
+
+.news-section ul li:nth-child(1):before {
+    color: #ff5733; /* Red */
+}
+
+.news-section ul li:nth-child(2):before {
+    color: #33ff57; /* Green */
+}
+
+.news-section ul li:nth-child(3):before {
+    color: #3357ff; /* Blue */
+}
+
+.news-section ul li:nth-child(4):before {
+    color: #f39c12; /* Orange */
+}
