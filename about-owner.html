@@ -57,7 +57,7 @@
             <a class="nav-link underline-hover" href="contact.html">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><button class="btn btn-primary me-2 gradient-button rounded-pill" type="button">Admin Dashboard</button></a>
+            <a class="nav-link" href="/admin/index.html"><button class="btn btn-primary me-2 gradient-button rounded-pill" type="button">Admin Dashboard</button></a>
           </li>
         </ul>
       </div>
@@ -100,24 +100,6 @@
     </footer>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.card');
-    
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-    
-      cards.forEach(card => {
-        observer.observe(card);
-      });
-    });
-    
-    </script>
+ 
     </body>
     </html>

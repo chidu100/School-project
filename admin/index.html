@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Crestwood Academy</title>
+    <link rel="shortcut icon" href="/images/logo/crestwood-academy-favicon-color.png" type="image/x-icon">
+</head>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg shadow fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto pt-5">
+              <li class="nav-item">
+                <a class="nav-link underline-hover" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle underline-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="/about.html">About Us</a></li>
+                  <li><a class="dropdown-item" href="/about-owner.html">About Our Owner</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="/academics.html">Academics</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle underline-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Admissions
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Undergraduate</a></li>
+                  <li><a class="dropdown-item" href="#">School Of Postgraduate students</a></li>
+                  <li><a class="dropdown-item" href="#">Apply To Crestwood</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="/news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="/events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="/contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/index.html"><button class="btn btn-primary me-2 gradient-button rounded-pill" type="button">Admin Dashboard</button></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End of navbar -->
+
+      <div class="container mt-5">
+        <div class=" shadow-lg p-4 move">
+            <h1 class="text-center">School Admin Dashboard</h1>
+            <form id="userTypeForm" class="mt-4">
+                <div class="form-group text-center">
+                  <label class="role-label">Select Your Role:</label>
+                  <div class="btn-group btn-group-toggle d-flex justify-content-center" data-toggle="buttons">
+                      <label class="btn btn-outline-primary">
+                          <input type="radio" name="userType" value="student.html" required> 
+                          <a href="student.html" class="stretched-link noline">Student</a>
+                      </label>
+                      <label class="btn btn-outline-success">
+                          <input type="radio" name="userType" value="teacher.html" required> 
+                          <a href="teacher.html" class="stretched-link noline">Teacher</a>
+                      </label>
+                      <label class="btn btn-outline-info">
+                          <input type="radio" name="userType" value="parent.html" required> 
+                          <a href="parent.html" class="stretched-link noline">Parent</a>
+                      </label>
+                    </div>
+                </div>
+            </form>   
+            <div class="mt-5">
+                <h3 class="text-center">Postgraduate Studies Application</h3>
+                <form action="thank_you_postgrad.html" method="get">
+                    <div class="form-group">
+                        <label class="label-name" for="postgradName">Student Name</label>
+                        <input type="text" class="form-control" id="postgradName" name="postgradName" placeholder="Enter your full name for postgraduate" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="sex">Sex</label>
+                      <select class="form-select" aria-label="Default select example" id="sex" name="sex" required>
+                        <option selected>Choose...</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer-not-to-say">Prefer not to say</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="DOB">Date of Birth</label>
+                      <input type="date" class="form-control" id="DOB" name="DOB" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="Nationality">Nationality</label>
+                      <input type="text" class="form-control" id="Nationality" name="Nationality" placeholder="Enter your nationality" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="Marital-Status">Marital Status</label>
+                      <select class="form-select" aria-label="Default select example" id="Marital-Status" name="Marital-Status" required>
+                        <option selected>Choose...</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="address">Address</label>
+                      <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="phone">Phone Number</label>
+                      <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <label class="label-name" for="previous degress">Previous Degree</label>
+                    <select class="form-select" aria-label="Default select example" id="previous degress" name="previous degress" required>
+                      <option selected>Choose...</option>
+                      <option value="Bachelor of Arts">Bachelor of Arts (BA)
+                      </option>
+                      <option value="Bachelor of Science (BS)">Bachelor of Science (BS)</option>
+                      <option value="Bachelor of Business Administration (BBA)">Bachelor of Business Administration (BBA)</option>
+                      <option value="Bachelor of Fine Arts (BFA)">Bachelor of Fine Arts (BFA)</option>
+                      <option value="Bachelor of Engineering (BEng or BE)">Bachelor of Engineering (BEng or BE)</option>
+                      <option value="Bachelor of Education (BEd)">Bachelor of Education (BEd)</option>
+                      <option value="Bachelor of Laws (LLB)">Bachelor of Laws (LLB)</option>
+                      <option value="Bachelor of Medicine (BMed)">Bachelor of Medicine (BMed)</option>
+                      <option value="Bachelor of Technology">Bachelor of Technology(BTech)</option>
+                    </select>
+                    <div class="form-group">
+                      <label class="label-name" for="previous university">Previous University</label>
+                      <input type="text" class="form-control" id="previous university" name="previous university" placeholder="Enter your previous university" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="previous year">Previous Year</label>
+                      <input type="text" class="form-control" id="previous year" name="previous year" placeholder="Enter your previous year" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="previous gpa">Previous GPA</label>
+                      <input type="text" class="form-control" id="previous gpa" name="previous gpa" placeholder="Enter your previous gpa" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="previous major">Previous Major</label>
+                      <input type="text" class="form-control" id="previous major" name="previous major" placeholder="Enter your previous major" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="Program-of-interest">Program of interest</label>
+                      <input type="text" class="form-control" id="Program-of-interest" name="Program-of-interest" placeholder="Enter your program of interest" required>
+                    </div>
+                    <label class="label-name" for="Personal-Statement">Personal Statement</label>
+                    <textarea class="form-control" cols="20" id="message" rows="4" placeholder="Your message" required></textarea>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-info btn-block mt-2 btn-rounded">Submit for Postgraduate</button>
+                    </div>
+                </form>
+            </div>
+            <div class="mt-5">
+                <h3 class="text-center">Apply to School</h3>
+                <form action="thank_you_register.html" method="get">
+                    <div class="form-group">
+                        <label class="label-name" for="applySchoolName">Student Name</label>
+                        <input type="text" class="form-control" id="applySchoolName" name="applySchoolName" placeholder="Enter your full name to apply" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="sex">Sex</label>
+                      <select class="form-select" aria-label="Default select example" id="sex" name="sex" required>
+                        <option selected>Choose...</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer-not-to-say">Prefer not to say</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="DOB">Date of Birth</label>
+                      <input type="date" class="form-control" id="DOB" name="DOB" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="Nationality">Nationality</label>
+                      <input type="text" class="form-control" id="Nationality" name="Nationality" placeholder="Enter your nationality" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="Marital-Status">Marital Status</label>
+                      <select class="form-select" aria-label="Default select example" id="Marital-Status" name="Marital-Status" required>
+                        <option selected>Choose...</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="address">Address</label>
+                      <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="phone">Phone Number</label>
+                      <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="schoolName">High School Name</label>
+                      <input type="text" class="form-control" id="schoolName" name="schoolName" placeholder="Enter your school name" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="year">Year</label>
+                      <input type="text" class="form-control" id="year" name="year" placeholder="Enter your year" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="grade">Grade</label>
+                      <input type="text" class="form-control" id="gpa" name="gpa" placeholder="Enter your gpa" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="label-name" for="Program-of-interest">Program of interest</label>
+                      <input type="text" class="form-control" id="Program-of-interest" name="Program-of-interest" placeholder="Enter your program of interest" required>
+                    </div>
+                    <label class="label-name" for="Personal-Statement">Personal Statement</label>
+                    <textarea class="form-control" cols="20" id="message" rows="4" placeholder="Your message" required></textarea>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-success btn-block btn-rounded mt-2">Submit for Apply</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+      <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Crestwood Academy. All rights reserved.</p>
+</footer>
+<!-- end of footer -->
+
+<!-- BACK TO TOP BUTTON  -->
+<a href="#" class="shadow btn-primary rounded-circle back-to-top">
+  <i class="bi bi-chevron-double-up"></i>
+</a>
+  
+    
+
+
+
+
+
+
+
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

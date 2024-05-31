@@ -11851,6 +11851,26 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.move {
+  margin-top: 150px;
+}
+
+.noline {
+  text-decoration: none;
+  color: #1a1918;
+}
+
+.label-name {
+  display: inline-block;
+  height: 100%;
+  margin: 0 20px;
+  line-height: 60px;
+  font-size: 18px;
+  color: #1a1918;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
 .navbar {
   background-image: linear-gradient(to right, #00aaff, #00ffdd);
   font-family: "Poppins", sans-serif;

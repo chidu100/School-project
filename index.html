@@ -55,7 +55,7 @@
             <a class="nav-link underline-hover" href="contact.html">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><button class="btn btn-primary me-2 gradient-button rounded-pill" type="button">Admin Dashboard</button></a>
+            <a class="nav-link" href="/admin/index.html"><button class="btn btn-primary me-2 gradient-button rounded-pill" type="button">Admin Dashboard</button></a>
           </li>
         </ul>
       </div>
@@ -307,10 +307,10 @@
         <h2 class="display-3 fw-bold mt-5">IMAGE GALLERY</h2>
         <div class="top-content">
           <h3 class="add-back">Photo Gallery</h3>
-          <label for="check1">All Photos</label>
-          <label for="check2">Activities</label>
-          <label for="check3">Music</label>
-          <label for="check4">Students</label>
+          <labelfor="check1">All Photos</label>
+          <labelfor="check2">Activities</label>
+          <labelfor="check3">Music</label>
+          <labelfor="check4">Students</label>
       </div>
       </div>
     </div>
@@ -434,34 +434,6 @@
 
 
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const cards = document.querySelectorAll('.card');
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-});
-
-document.querySelectorAll('input[name="category"]').forEach((input) => {
-  input.addEventListener('change', function() {
-    document.querySelectorAll('.category').forEach((category) => {
-      category.style.display = 'none';
-    });
-    document.querySelector(`.category.${this.value}`).style.display = 'block';
-  });
-});
-
-
-</script>
 </body>
 </html>

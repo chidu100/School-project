@@ -1,5 +1,9 @@
 @use 'custom';
 
+// import admin
+@use 'admin/home';
+
+
 // import sections
 @use 'sections/navbar';
 @use 'sections/hero-section';
