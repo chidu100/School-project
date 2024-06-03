@@ -62,7 +62,7 @@ h2::before{
   color: #f85a40;
 }
 
-label {
+.label {
   display: inline-block;
   height: 100%;
   margin: 0 20px;
@@ -72,7 +72,7 @@ label {
   cursor: pointer;
   transition: color .5s;
 }
-label:hover {
+.label:hover {
   color: #f85a40;
 }
 .photo-gallery {

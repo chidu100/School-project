@@ -15,7 +15,34 @@
         margin: 0 20px;
         line-height: 60px;
         font-size: 18px;
-        color: #1a1918;
         cursor: pointer;
-        transition: color .5s;
+        transition: .5s;
 }
+
+// student form
+
+.login-form {
+    margin: 150px 0;
+    padding: 50px 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+  .btn-lg {
+    width: 200px;
+  }
+
+  .no-line {
+    text-decoration: none;
+    padding: 10px;
+  }
