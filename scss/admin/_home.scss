@@ -1,5 +1,6 @@
 @use '../custom' as *;
 
+
 .move {
     margin-top: 150px;
 }
@@ -19,7 +20,7 @@
         transition: .5s;
 }
 
-// student form
+// login form for students, parents, and teachers
 
 .login-form {
     margin: 150px 0;

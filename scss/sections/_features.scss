@@ -20,7 +20,7 @@
   color: #777;
 }
 
-.card {
+.card-feature {
   background: #fff;
   border: none;
   border-radius: 10px;
@@ -29,26 +29,26 @@
   margin-bottom: 2rem;
 }
 
-.card:hover {
+.card-feature:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
 }
 
-.card-img-top {
+.card-img-top-feature {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.card-body {
+.card-body-feature {
   padding: 1.5rem;
   text-align: center;
 }
 
-.card-title {
+.card-title-feature {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.card-text {
+.card-text-feature {
   color: #777;
 }

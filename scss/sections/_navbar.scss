@@ -1,4 +1,4 @@
-.navbar {
+.navbar-bg {
     background-image: linear-gradient(to right, #00aaff, #00ffdd);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -36,8 +36,8 @@
     transform-origin: bottom left;
 }
 
-/* Nav dropdown */
-.navbar .dropdown ul {
+/* Nav custom-dropdown */
+.navbar .custom-dropdown ul {
     display: block;
     position: absolute;
     left: 28px;
@@ -53,11 +53,11 @@
     border-radius: 4px;
 }
 
-.navbar .dropdown ul li {
+.navbar .custom-dropdown ul li {
     min-width: 200px;
 }
 
-.navbar .dropdown ul a {
+.navbar .custom-dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
@@ -65,30 +65,30 @@
     color: #333;
 }
 
-.navbar .dropdown ul a i {
+.navbar .custom-dropdown ul a i {
     font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .custom-dropdown ul a:hover,
+.navbar .custom-dropdown ul .active:hover,
+.navbar .custom-dropdown ul li:hover>a {
     color: #fff;
     background-color: #f85a40;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .custom-dropdown:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
 }
 
-.navbar .dropdown .dropdown ul {
+.navbar .custom-dropdown .custom-dropdown ul {
     top: 0;
     left: calc(100% - 30px);
     visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .custom-dropdown .custom-dropdown:hover>ul {
     opacity: 1;
     top: 0;
     left: 100%;

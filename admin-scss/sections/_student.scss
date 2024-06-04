@@ -1,0 +1,164 @@
+@use '../custom' as *;
+
+/* Custom styles for the admin dashboard */
+body {
+    overflow-x: hidden;
+  }
+  //for the waving hand
+  .wave {
+    animation-name: wave-animation; 
+    animation-duration: 2.5s;       
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;      
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  
+    100% { transform: rotate( 0.0deg) }
+  }
+  // end of waving hand
+
+  #wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .writing{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: black;
+    &:hover{
+      color: black;
+    }
+  }
+
+  
+  
+  #menu-toggle:checked ~ #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    width: 250px;
+    margin-left: -250px;
+    transition: margin 0.25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #toggle-button {
+    margin: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+    
+    #menu-toggle:checked ~ #sidebar-wrapper {
+      margin-left: -250px;
+    }
+  
+  }
+  .Standardize {
+    margin-right: 570px;
+  }
+  .orient{
+    margin-right: 150px;
+    & .modest {
+      font-size: 2rem;
+    }
+  }
+
+
+.faded{
+ opacity: 0.5;
+ width: 100px;
+}
+
+  .pointer {
+    cursor: pointer;
+  }
+  
+
+  .box {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px;
+  }
+  .column {
+    padding: 15px;
+    border-right: 1px solid #ddd;
+  }
+  .column:last-child {
+    border-right: none;
+  }
+  .list-group-item:first-child {
+    font-weight: bold;
+  }
+
+  #calendar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 3px;
+  }
+  
+
+  .large {
+    font-size: 6rem;
+  }
+
+  .numbered {
+    font-size: 3rem;
+    color: aqua;
+  }
+
+  @media (max-width: 768px) {
+    /* Adjust layout for screens smaller than 768px */
+    .card .row .col-md-8 .container {
+      flex-direction: column; /* Stack elements vertically */
+      width: 100%;
+    }
+  .box{
+     width: 100%;
+     margin: 0px;
+     margin-bottom: 1rem; /* Add some spacing between boxes */
+
+  }
+  .column {
+    border-right: none;
+  }
+    .card .row .col-md-8 .container .column {
+      margin-bottom: 1rem; /* Add some spacing between columns */
+    }
+    #calendar {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      padding: 20px;
+      margin-right: 100px;
+    }
+  }
