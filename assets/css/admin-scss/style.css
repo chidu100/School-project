@@ -11905,11 +11905,20 @@ body {
   color: black;
 }
 
+.sidebar-heading {
+  margin-top: 100px;
+}
+
+.adjust {
+  margin-top: 130px;
+}
+
 #menu-toggle:checked ~ #sidebar-wrapper {
   margin-left: 0;
 }
 
 #sidebar-wrapper {
+  background-color: #ff5500;
   min-height: 100vh;
   width: 250px;
   margin-left: -250px;
@@ -12011,7 +12020,7 @@ body {
 }
 
 .student-line {
-  stroke: blue;
+  stroke: #00aaff;
 }
 
 .teacher-line {
@@ -12037,7 +12046,7 @@ body {
   display: inline-block;
   width: 20px;
   height: 10px;
-  background-color: blue;
+  background-color: #00aaff;
   margin-right: 5px;
 }
 
@@ -12073,7 +12082,7 @@ body {
 
 .circle-progress-value {
   clip: rect(0, 75px, 150px, 0);
-  background: blue;
+  background: #00aaff;
 }
 
 .circle-progress-left .circle-progress-value {
@@ -12139,6 +12148,11 @@ body {
     margin-right: 100px;
   }
 }
+.active-menu {
+  color: #00aaff;
+  font-weight: 900;
+}
+
 .back-to-top {
   position: fixed;
   width: 3rem;
@@ -12155,6 +12169,58 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  font-weight: normal;
+}
+
+.profile-container {
+  background-color: rgb(250, 243, 243);
+  padding: 2rem 0;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-info {
+  margin-left: 20px;
+}
+
+.profile-picture {
+  margin-top: -80px;
+  width: 150px;
+  height: 150px;
+  border: 3px solid #fff;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+}
+
+.department {
+  margin-top: -10px;
+}
+
+.info {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 32px 64px;
+  background-color: #fff;
+  margin: 20px 30px;
+  padding: 50px 20px;
+}
+
+.personal-details {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+  padding: 20px 15px;
+  height: 370px;
+}
+
+.about-me {
+  border: 3px solid transparent;
 }
 
 body {

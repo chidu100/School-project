@@ -40,13 +40,22 @@ body {
     }
   }
 
+
+
+  .sidebar-heading {
+    margin-top: 100px;
+  }
   
+  .adjust{
+    margin-top: 130px;
+  }
   
   #menu-toggle:checked ~ #sidebar-wrapper {
     margin-left: 0;
   }
   
   #sidebar-wrapper {
+    background-color: #ff5500;
     min-height: 100vh;
     width: 250px;
     margin-left: -250px;
@@ -147,7 +156,7 @@ body {
     stroke-width: 3;
 }
 .student-line {
-    stroke: blue;
+    stroke: #00aaff;
 }
 .teacher-line {
     stroke: #f85a40;
@@ -168,7 +177,7 @@ body {
     display: inline-block;
     width: 20px;
     height: 10px;
-    background-color: blue;
+    background-color: #00aaff;
     margin-right: 5px;
 }
 .legend .teacher-label::before {
@@ -199,7 +208,7 @@ body {
 }
 .circle-progress-value {
     clip: rect(0, 75px, 150px, 0);
-    background: blue;
+    background: #00aaff;
 }
 .circle-progress-left .circle-progress-value {
     clip: rect(0, 150px, 150px, 75px);
@@ -262,4 +271,10 @@ body {
       padding: 20px;
       margin-right: 100px;
     }
+  }
+
+  // active menu style
+  .active-menu {
+   color: #00aaff;
+   font-weight: 900;
   }
