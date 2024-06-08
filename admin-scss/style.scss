@@ -3,6 +3,10 @@
 
 // import section
 @use 'sections/student';
+@use 'sections/footer';
+
 
 // import components
 @use 'components/typography';
+@use 'components/buttons';
+@use 'components/mixins';

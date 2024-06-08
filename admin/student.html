@@ -17,7 +17,7 @@
     <div class="d-flex" id="wrapper">
       <input type="checkbox" id="menu-toggle" hidden>
       <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">Admin Dashboard</div>
+        <div class="sidebar-heading p-4">Admin Dashboard</div>
         <div class="list-group list-group-flush">
           <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
           <a href="#" class="list-group-item list-group-item-action bg-light">Users</a>
@@ -59,7 +59,7 @@
                         <i class="bi bi-file-earmark-person-fill modest"></i>
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-                        <li><button class="dropdown-item" type="button"><i class="bi bi-box-arrow-left pe-2"></i>Logout</button></li>
+                        <li><button class="dropdown-item" type="button"><a href="/admin/student-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
                         <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
                       </ul>
                     </div>
@@ -86,7 +86,7 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary btn-rounded">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary btn-rounded">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary btn-rounded">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary btn-rounded">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -150,9 +150,9 @@
                 <div class="column col-md-3">
                   <h5 class="text-center">Details</h5>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Classes: Math, Science</li>
-                    <li class="list-group-item">Lessons: Algebra, Biology</li>
-                    <li class="list-group-item">Time: 9:00 AM - 11:00 AM</li>
+                    <li class="list-group-item"><i class="bi bi-cast me-2"></i>Classes: Math, Science</li>
+                    <li class="list-group-item"><i class="bi bi-book me-2"></i>Lessons: Algebra, Biology</li>
+                    <li class="list-group-item"><i class="bi bi-alarm me-2"></i>Time: 9:00 AM - 11:00 AM</li>
                   </ul>
                 </div>
                 <div class="column col-md-3">
@@ -168,64 +168,89 @@
                 <div class="column col-md-3 text-center">
                   <h4>View All</h4>
                   <div class="text-center">
-                    <button type="button" class="btn btn-secondary mt-5">Skip</button>
+                    <button type="button" class="btn btn-secondary mt-5 btn-rounded" style="background-color: #14c5ad;">Skip</button>
                   </div>
                   <div class="text-center">
-                    <button type="button" class="btn btn-primary mt-5">Continue</button>
+                    <button type="button" class="btn btn-primary mt-5 btn-rounded">Continue</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-3 p-3 ms-5">
+            <div class="col-md-3 ms-5 mt-3 mb-3">
               <div id='calendar'></div>
             </div>
           </div>
          </div>
+         <!-- end of schdule -->
 
-        <!-- Table -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <i class="fas fa-table mr-1"></i>
-            DataTable Example
+         <div class="container">
+          <h1 class="text-center mb-4">Studying Activities</h1>
+          <div class="row">
+              <div class="col-md-8">
+                  <div class="graph-container">
+                      <div class="legend">
+                          <span class="student-label">Student</span>
+                          <span class="teacher-label">Teacher</span>
+                      </div>
+                      <svg width="600" height="400">
+                          <!-- X and Y axis -->
+                          <line x1="50" y1="350" x2="550" y2="350" stroke="black" />
+                          <line x1="50" y1="50" x2="50" y2="350" stroke="black" />
+  
+                          <!-- Y axis labels -->
+                          <text x="30" y="350" font-size="10">0%</text>
+                          <text x="20" y="300" font-size="10">20%</text>
+                          <text x="20" y="250" font-size="10">40%</text>
+                          <text x="20" y="200" font-size="10">60%</text>
+                          <text x="20" y="150" font-size="10">80%</text>
+                          <text x="20" y="100" font-size="10">100%</text>
+  
+                          <!-- X axis labels -->
+                          <text x="50" y="370" font-size="10">Jan</text>
+                          <text x="100" y="370" font-size="10">Feb</text>
+                          <text x="150" y="370" font-size="10">Mar</text>
+                          <text x="200" y="370" font-size="10">Apr</text>
+                          <text x="250" y="370" font-size="10">May</text>
+                          <text x="300" y="370" font-size="10">Jun</text>
+                          <text x="350" y="370" font-size="10">Jul</text>
+                          <text x="400" y="370" font-size="10">Aug</text>
+                          <text x="450" y="370" font-size="10">Sep</text>
+                          <text x="500" y="370" font-size="10">Oct</text>
+                          <text x="550" y="370" font-size="10">Nov</text>
+                          <text x="600" y="370" font-size="10">Dec</text>
+  
+                          <!-- Student Line (Wave Curve) -->
+                          <path class="line student-line" d="M50,300 Q100,250 150,300 T250,200 T350,150 T450,100 T550,50" />
+  
+                          <!-- Teacher Line (Wave Curve) -->
+                          <path class="line teacher-line" d="M50,350 Q100,300 150,350 T250,250 T350,200 T450,150 T550,100" />
+                      </svg>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex flex-column align-items-center">
+                  <div class="circle-title">Progress</div>
+                  <div class="circle-progress">
+                      <div class="circle-bg"></div>
+                      <div class="circle-progress-value" style="transform: rotate(120deg);"></div>
+                      <div class="circle-progress-left">
+                          <div class="circle-progress-value" style="background: #f85a40; transform: rotate(60deg);"></div>
+                      </div>
+                      <div class="circle-inner">80%</div>
+                  </div>
+              </div>
           </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                  </tr>
-                  <!-- Additional rows as needed -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      </div>
+               <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Crestwood Academy. All rights reserved.</p>
+</footer>
+<!-- end of footer -->
+
+<!-- BACK TO TOP BUTTON  -->
+<a href="#" class="shadow btn-primary rounded-circle back-to-top">
+  <i class="bi bi-chevron-double-up"></i>
+</a>
+  
       </div>
     </div>
   </div>
@@ -233,15 +258,6 @@
   
 
 
-    
-
-
-
-
-<!-- BACK TO TOP BUTTON  -->
-<a href="#" class="shadow btn-primary rounded-circle back-to-top">
-  <i class="bi bi-chevron-double-up"></i>
-</a>
   
     
 

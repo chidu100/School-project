@@ -11853,6 +11853,7 @@ textarea.form-control-lg {
 }
 .move {
   margin-top: 150px;
+  margin-bottom: 20px;
 }
 
 .noline {
@@ -11895,6 +11896,72 @@ textarea.form-control-lg {
 .no-line {
   text-decoration: none;
   padding: 10px;
+}
+
+.admin .form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin .form-row .admin-input-group {
+  width: calc(50% - 10px);
+}
+
+.admin .admin-input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.admin .admin-input-group input,
+.admin .admin-input-group select,
+.admin .admin-input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.admin .admin-input-group label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px;
+  color: #aaa;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.admin .admin-input-group input:focus,
+.admin .admin-input-group select:focus,
+.admin .admin-input-group textarea:focus {
+  border-color: #00aaff;
+}
+
+.admin .admin-input-group input:focus + label,
+.admin .admin-input-group select:focus + label,
+.admin .admin-input-group textarea:focus + label,
+.admin .admin-input-group input:not(:placeholder-shown) + label,
+.admin .admin-input-group select:not(:placeholder-shown) + label,
+.admin .admin-input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  color: #000;
+  font-size: 12px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn-block {
+  width: 60%;
+}
+
+.btn-rounded {
+  border-radius: 50px;
 }
 
 .navbar-bg {

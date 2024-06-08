@@ -11988,6 +11988,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 3px;
+  cursor: pointer;
 }
 
 .large {
@@ -11999,6 +12000,121 @@ body {
   color: aqua;
 }
 
+.graph-container {
+  width: 100%;
+  position: relative;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3;
+}
+
+.student-line {
+  stroke: blue;
+}
+
+.teacher-line {
+  stroke: #f85a40;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.legend {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.legend span {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.legend .student-label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: blue;
+  margin-right: 5px;
+}
+
+.legend .teacher-label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: #f85a40;
+  margin-right: 5px;
+}
+
+.circle-progress {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.circle-bg, .circle-progress-value {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle-bg {
+  background: #e6e6e6;
+}
+
+.circle-progress-value {
+  clip: rect(0, 75px, 150px, 0);
+  background: blue;
+}
+
+.circle-progress-left .circle-progress-value {
+  clip: rect(0, 150px, 150px, 75px);
+  transform: rotate(180deg);
+}
+
+.circle-inner {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.circle-title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .graph-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .legend {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .circle-progress {
+    margin: 10px auto;
+  }
+}
 @media (max-width: 768px) {
   /* Adjust layout for screens smaller than 768px */
   .card .row .col-md-8 .container {
@@ -12019,12 +12135,60 @@ body {
   #calendar {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
     margin-right: 100px;
   }
 }
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+}
+.back-to-top i {
+  color: #f85a40;
+  font-size: 1.3rem;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 body {
   font-family: "Poppins", sans-serif;
+}
+
+.btn-rounded {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.5s ease;
+  /* Create the sliding effect */
+  /* Hover effect to trigger the sliding */
+}
+.btn-rounded::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #007bff, cyan);
+  transition: left 0.5s ease;
+}
+.btn-rounded:hover::before {
+  left: 100%;
+}
+.btn-rounded:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

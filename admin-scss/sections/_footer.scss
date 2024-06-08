@@ -1,0 +1,22 @@
+@use '../custom' as *;
+
+
+// STYLE THE BACK TO TOP BUTTON 
+.back-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
+
+    i {
+        color: #f85a40;
+        font-size: 1.3rem;
+        font-weight: 900; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
