@@ -52,3 +52,39 @@
   .about-me{
     border: 3px solid transparent;
   }
+
+  @media (max-width: 767.98px) {
+    .profile-info {
+      margin-left: 48px;
+    }
+    .reduce{
+      font-size: 0.5rem;
+    }
+  
+    .profile-picture {
+      width: 130px;
+      height: 130px;
+      margin-top: -70px;
+    }
+  
+    .profile-name {
+      font-size: 1.3rem;
+    }
+  
+    .info {
+      margin: 15px 25px;
+      padding: 40px 20px;
+    }
+  
+    .personal-details {
+      height: auto;
+      padding: 20px 15px;
+      .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+        & span {
+    margin-top: 0.5rem;
+  }
+      }
+    }
+  }
