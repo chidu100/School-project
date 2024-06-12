@@ -43,7 +43,7 @@
               <div class="collapse" id="profile">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="/admin/student-profile.html" class="nav-link px-3 active-menu">
+                    <a href="/admin/student-profile.html" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-tag"></i
                       ></span>
@@ -51,7 +51,7 @@
                     </a>
                     </li>
                     <li>
-                      <a href="/admin/edit-profile.html" class="nav-link px-3"><span class="me-2"><i class="bi bi-person-gear"></i
+                      <a href="/admin/edit-profile.html" class="nav-link px-3 active-menu"><span class="me-2"><i class="bi bi-person-gear"></i
                         ></span>
                         <span>Edit Profile</span>
                       </a>
@@ -255,77 +255,90 @@
           </div>
         </div>
 
-         <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid profile-container">
-          <div class="adjust d-flex justify-content-between align-items-center">
-            <h1>
-              <img src="/images/admin/profile/online-learning.png" alt="Profile" class="img-fluid faded">Doe Your Details!</h1>
-              <p class="mt-3" style="font-size: 1.5rem;" class="reduce">
-                Student<span style="font-weight: 700; margin-right: 100px;" classs="reduce">/Student Detail</span>
-              </p>
-          </div>
-            <div class="row info">
-              <div class="col-md-4">
-                <h3 class="p-3">Profile</h3>
-              </div>
-                <div class="row no-gutters">
-                    <div class="col-md-12 cover-image">
-                      <img src="/images/try.jpg" alt="Cover Image" class="rounded">
+        <div class="student-form mt-5">
+            <h3 class="pb-3 move">Edit Profile</h3>
+            <form class="admin" action="/admin/student-profile.html" method="get">
+                <div class="form-row form-section">
+                    <div class="student-form-group col-md-4">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="firstName" value="John" required>
                     </div>
-                    <div class="profile-info">              
-                <img src="/images/absolut-0NNhN0jggvo-unsplash.jpg" alt="Profile Picture" class="rounded-circle profile-picture">
-                <h3 class="ms-3 profile-name">John Doe</h3>
-                <p class="text-muted department">Computer Science</p>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="col-md-5 personal-details">
-                <h3>Personal Details</h3>
-                <ul class="list-group">
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Email:
-                    <span class="email">johndoe@example.com</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Phone Number:
-                    <span class="phone-number">(123) 456-7890</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Gender:
-                    <span class="gender">Male</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Date of Birth:
-                    <span class="date-of-birth">01/01/2000</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Address:
-                    <span class="address">123 Main Street, New York, NY 12345</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    City:
-                    <span class="city">New York</span>
-                  </li>
-                  </ul>
-              </div>
-              <div class="col-md-7 about-me">
-                <h3>About Me</h3>
-                <p class="about-me-text">The whirring of the computer fan was a lullaby to me, not the chirping of crickets. Unlike other kids glued to cartoons, I was mesmerized by coding tutorials. Lines of code weren't just symbols; they were building blocks, tools to create something magical in a world of pixels. In my mind, I wasn't just watching a screen, I was building it.
-                  This fascination started with a simple question: "How does this work?" My insatiable curiosity led me to dismantle old electronics (much to my parents' dismay) and rebuild them in a way that, while sometimes Frankenstein-esque, still functioned. Lego sets became more than castles and spaceships; they were rudimentary robots controlled by my own rudimentary code. As I grow older, my tech affinity blossoms. I'm particularly captivated by the world of game development, dreaming of creating immersive worlds where players can explore and adventure. Every spare moment is spent devouring online tutorials, attending weekend coding workshops, and fiddling with my ever-growing collection of game design software. The internet, once a source of funny cat videos, has become a collaborative haven. I connect with other young tech enthusiasts, share our creations, and learn from each other's successes (and failures).
+                    <div class="student-form-group col-md-4">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="lastName" value="Doe" required>
+                    </div>
+                    <div class="student-form-group col-md-4">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender" class="form-control" required>
+                            <option selected>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="form-row form-section">
+                    <div class="student-form-group col-md-4">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" class="form-control" id="dob" value="2000-01-01" required>
+                    </div>
+                    <div class="student-form-group col-md-4">
+                        <label for="roll">Roll Number <span class="required">*</span></label>
+                        <input type="number" class="form-control" id="roll" value="123" required>
+                    </div>
+                    <div class="student-form-group col-md-4">
+                        <label for="religion">Religion <span class="required">*</span></label>
+                        <select id="religion" class="form-control" required>
+                            <option>Muslim</option>
+                            <option selected>Christian</option>
+                            <option>Better not say</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="form-row form-section">
+                    <div class="student-form-group col-md-4">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" class="form-control" id="email" value="john@crestwood.com" required>
+                    </div>
+                    <div class="student-form-group col-md-4">
+                        <label for="class">Class <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="class" value="10" required>
+                    </div>
+                    <div class="student-form-group col-md-4">
+                        <label for="section">Section <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="section" value="A" required>
+                    </div>
+                </div>
+    
+                <div class="form-row form-section">
+                    <div class="student-form-group col-md-4">
+                        <label for="admissionId">Admission ID <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="admissionId" value="C123456" required>
+                    </div>
+                    <div class="student-form-group col-md-4">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" class="form-control" id="phone" value="123-456-7890" required>
+                    </div>
+                </div>
+    
+                <div class="form-row form-section">
+                    <div class="student-form-group col-md-12">
+                        <label for="uploadPicture">Upload a Picture <span class="required">*</span></label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="uploadPicture" required>
+                            <label class="custom-file-label" for="uploadPicture">Choose picture</label>
+                        </div>
+                    </div>
+                </div>
+    
+                <button type="submit" class="btn btn-lg btn-primary btn-block btn-rounded">Submit</button>
+            </form>
+        </div>
 
-                  My passion for tech goes beyond just a career choice. It's a relentless chase for knowledge, a desire to build things that not only entertain but also make a difference. I dream of creating games that [insert your specific dream for your games, e.g., challenge players to think critically, teach valuable problem-solving skills, or provide a platform for social connection].
-                  
-                  However, my journey won't be without its glitches. Coding can be frustrating, with lines that refuse to cooperate and ideas that fizzle out. But I, fueled by my unwavering passion, won't be deterred. I find inspiration in the stories of tech giants and the endless possibilities my creations hold.
-                  
-                  I am just one example of a young student with a bright future in tech. There are countless others like me, brimming with potential and fueled by curiosity, waiting to make our mark on the digital landscape. By nurturing our inquisitiveness and providing us with the right tools and guidance, we can be empowered to become the changemakers and innovators of tomorrow.</p>
-              </div>
-            </div>
-          </div>
 
-    </div>
-    </div>
-               <!-- Footer -->
+
+                    <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <p>&copy; 2024 Crestwood Academy. All rights reserved.</p>
 </footer>
@@ -338,7 +351,8 @@
   
       </div>
     </div>
-  </div> 
+  </div>
+      
   
 
 
@@ -357,3 +371,7 @@
   </body>
 
 </html>
+
+
+
+         

@@ -12273,6 +12273,82 @@ body {
     margin-top: 0.5rem;
   }
 }
+.move {
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+.student-form {
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 3.6rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.student-form-group {
+  flex: 1;
+  position: relative;
+}
+
+.custom-file-label::after {
+  content: "Browse";
+}
+
+.student-form-group input,
+.student-form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.student-form-group label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px;
+  color: #aaa;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.student-form-group input:focus,
+.student-form-group select:focus {
+  border-color: #00aaff;
+}
+
+.student-form-group input:focus + label,
+.student-form-group select:focus + label,
+.student-form-group input:not(:placeholder-shown) + label,
+.student-form-group select:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  color: #000;
+  font-size: 12px;
+}
+
+.custom-file-label::after {
+  content: "Browse";
+}
+
+.btn-lg {
+  width: 200px;
+}
+
+.required {
+  color: red;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
