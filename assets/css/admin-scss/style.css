@@ -12349,6 +12349,11 @@ body {
   color: red;
 }
 
+.sign {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

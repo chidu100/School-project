@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/admin-scss/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Assignment Page</title>
+    <link rel="shortcut icon" href="/images/logo/crestwood-academy-favicon-color.png" type="image/x-icon">
+</head>
+  <body>
+    <!-- Sidebar -->
+    <div class="d-flex" id="wrapper">
+      <input type="checkbox" id="menu-toggle" hidden>
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading"><h3>Student <span style="color: #f85a40; font-weight: bolder;">Dashboard</span></h3></div>
+        <div class="list-group list-group-flush">
+          <a href="/admin/student.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"
+            ><i class="bi bi-speedometer2"></i
+          ></span>
+          <span>Dashboard</span></a>
+          <!-- profile -->
+          <div class="list-group-item list-group-item-action bg-light ">
+            <a
+                class="nav-link sidebar-link active-menu"
+                data-bs-toggle="collapse"
+                href="#profile"
+              >
+              <span class="me-2">
+                <i class="bi bi-card-text"></i>
+              </span>
+                <span>Profile</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="profile">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="/admin/student-profile.html" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-tag"></i
+                      ></span>
+                      <span>My Profile</span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="/admin/edit-profile.html" class="nav-link px-3 active-menu"><span class="me-2"><i class="bi bi-person-gear"></i
+                        ></span>
+                        <span>Edit Profile</span>
+                      </a>
+                    </li>
+                </ul>
+                </div>
+          </div>
+           <!--end of profile  -->
+
+          <!-- Activities -->
+          <div class="list-group-item list-group-item-action bg-light">
+            <a
+                class="nav-link sidebar-link"
+                data-bs-toggle="collapse"
+                href="#layouts"
+              >
+                <span class="me-2"><i class="bi bi-person-walking"></i></span>
+                <span>Activities</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="layouts">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-file-earmark-text"></i
+                      ></span>
+                      <span>Assignment</span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-3"><span class="me-2"><i class="bi bi-check-circle"></i
+                        ></span>
+                        <span>Exams and test</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-3"><span class="me-2"><i class="bi bi-calendar-check"></i
+                        ></span>
+                        <span>Attendence</span>
+                      </a>
+                    </li>
+                </ul>
+                </div>
+          </div>
+          <!-- end of Activities -->
+
+           <!-- courses -->
+          <div class="list-group-item list-group-item-action bg-light">
+            <a
+                class="nav-link sidebar-link"
+                data-bs-toggle="collapse"
+                href="#courses"
+              >
+                <span class="me-2"><i class="bi bi-bookshelf"></i></span>
+                <span>Courses</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="courses">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-list"></i
+                      ></span>
+                      <span>View Courses</span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-3"><span class="me-2"><i class="bi bi-wrench"></i
+                        ></span>
+                        <span>Edit Courses</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-3"><span class="me-2"><i class="bi bi-plus-circle"></i
+                        ></span>
+                        <span>Add Courses</span>
+                      </a>
+                    </li>
+                </ul>
+                </div>
+          </div>
+           <!-- End of courses -->
+
+           <!-- Projects -->
+           <div class="list-group-item list-group-item-action bg-light">
+            <a
+                class="nav-link sidebar-link"
+                data-bs-toggle="collapse"
+                href="#projects"
+              >
+                <span class="me-2"><i class="bi bi-folder"></i></span>
+                <span>Projects</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="projects">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-list-ul"></i
+                      ></span>
+                      <span>All Projects</span>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-3"><span class="me-2"><i class="bi bi-pencil"></i
+                        ></span>
+                        <span>Edit Projects</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link px-3"><span class="me-2"><i class="bi bi-folder-plus"></i
+                        ></span>
+                        <span>Add Projects</span>
+                      </a>
+                    </li>
+                </ul>
+                </div>
+          </div>
+            <!-- end of projects -->
+          
+          <a href="#" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-calendar-event"></i
+            ></span>
+            <span>Upcoming Events</span></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-receipt"></i
+            ></span>
+            <span>School Invoice</span></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-calendar"></i
+            ></span>
+            <span>School Calendar</span></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-newspaper"></i
+            ></span>
+            <span>blog</span></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-archive"></i
+            ></span>
+            <span>Library</span></a>
+          <a href="#" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-gear"></i
+            ></span>
+            <span>Settings</span></a>
+          <a href="/admin/student-login.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-door-closed-fill"></i
+            ></span>
+            <span>Logout</span></a>
+        </div>
+      </div>
+     
+      <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row align-items-center bg-primary shadow fixed-top">
+          <div class="col-auto d-flex align-items-center">
+            <a class="navbar-brand ms-3 writing order2" href="#">
+              <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+              Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
+            </a>
+            <label for="menu-toggle" class="btn btn-primary text-white order1" id="toggle-button">
+              <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
+            </label>
+            
+          </div>
+          <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                  <li class="nav-item Standardize">
+                    <div class="input-group mt-3">
+                      <span class="input-group-text"><button class="btn btn-block"><i class="bi bi-search"></i></button></span>
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Search">
+                        <label for="floatingInputGroup1">Search</label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="btn-group p-3 orient">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        <i class="bi bi-file-earmark-person-fill modest"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                        <li><button class="dropdown-item" type="button"><a href="/admin/student-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
+                        <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="container-fluid move">
+            <h1 class="mt-4">Upcoming Assignments</h1>
+            <div class="row mt-4 sign">
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Math Assignment</h5>
+                                <small>Due: 2024-06-15</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Chapter 5: Integration. Complete exercises 1-20.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Assignment Details</a>
+                            <a href="#" class="btn btn-info btn-sm">Syllabus</a>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="mathAssignmentComplete">
+                                <label class="form-check-label" for="mathAssignmentComplete">Mark as Completed</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Science Project</h5>
+                                <small>Due: 2024-06-20</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Prepare a model on the Solar System and write a report.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Project Details</a>
+                            <a href="#" class="btn btn-info btn-sm">Syllabus</a>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="scienceProjectComplete">
+                                <label class="form-check-label" for="scienceProjectComplete">Mark as Completed</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">History Essay</h5>
+                                <small>Due: 2024-06-25</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Write an essay on World War II and its impacts.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Essay Details</a>
+                            <a href="#" class="btn btn-info btn-sm">Syllabus</a>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="historyEssayComplete">
+                                <label class="form-check-label" for="historyEssayComplete">Mark as Completed</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        
+
+
+                    <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2024 Crestwood Academy. All rights reserved.</p>
+</footer>
+<!-- end of footer -->
+
+<!-- BACK TO TOP BUTTON  -->
+<a href="#" class="shadow btn-primary rounded-circle back-to-top">
+  <i class="bi bi-chevron-double-up"></i>
+</a>
+  
+      </div>
+    </div>
+  </div>
+      
+  
+
+
+  
+    
+
+
+
+
+
+
+
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </body>
+
+</html>
+
