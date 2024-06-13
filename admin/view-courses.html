@@ -19,14 +19,14 @@
       <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading"><h3>Student <span style="color: #f85a40; font-weight: bolder;">Dashboard</span></h3></div>
         <div class="list-group list-group-flush">
-          <a href="/admin/student.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"
+          <a href="/admin/student.html" class="list-group-item list-group-item-action bg-light active-menu"><span class="me-2"
             ><i class="bi bi-speedometer2"></i
           ></span>
           <span>Dashboard</span></a>
           <!-- profile -->
-          <div class="list-group-item list-group-item-action bg-light ">
+          <div class="list-group-item list-group-item-action bg-light">
             <a
-                class="nav-link sidebar-link active-menu"
+                class="nav-link sidebar-link"
                 data-bs-toggle="collapse"
                 href="#profile"
               >
@@ -43,7 +43,7 @@
               <div class="collapse" id="profile">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="/admin/student-profile.html" class="nav-link px-3 active-menu">
+                    <a href="/admin/student-profile.html" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-tag"></i
                       ></span>
@@ -213,132 +213,155 @@
      
       <!-- Page Content -->
     <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <div class="row align-items-center bg-primary shadow fixed-top">
-          <div class="col-auto d-flex align-items-center">
-            <a class="navbar-brand ms-3 writing order2" href="#">
-              <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-              Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
-            </a>
-            <label for="menu-toggle" class="btn btn-primary text-white order1" id="toggle-button">
-              <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
-            </label>
-            
-          </div>
-          <div class="col">
-            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item Standardize">
-                    <div class="input-group mt-3">
-                      <span class="input-group-text"><button class="btn btn-block"><i class="bi bi-search"></i></button></span>
-                      <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Search">
-                        <label for="floatingInputGroup1">Search</label>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="btn-group p-3 orient">
-                      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                        <i class="bi bi-file-earmark-person-fill modest"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-                        <li><button class="dropdown-item" type="button"><a href="/admin/student-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
-                        <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
+        <div class="container-fluid">
+            <div class="row align-items-center bg-primary shadow fixed-top">
+              <div class="col-auto d-flex align-items-center">
+                <a class="navbar-brand ms-3 writing order2" href="#">
+                  <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
+                </a>
+                <label for="menu-toggle" class="btn btn-primary text-white order1" id="toggle-button">
+                  <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
+                </label>
+                
               </div>
-            </nav>
-          </div>
+              <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                      <li class="nav-item Standardize">
+                        <div class="input-group mt-3">
+                          <span class="input-group-text"><button class="btn btn-block"><i class="bi bi-search"></i></button></span>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Search">
+                            <label for="floatingInputGroup1">Search</label>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="btn-group p-3 orient">
+                          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <i class="bi bi-file-earmark-person-fill modest"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <li><button class="dropdown-item" type="button"><a href="/admin/student-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
+                            <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+      
+            <div class="container-fluid move">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="mt-4">Science Courses</h1>
+                    <div class="mt-4">
+                        <a href="/admin/edit-courses.html" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Edit Courses</a>
+                        <a href="/admin/add-courses.html" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i> Add Courses</a>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control mb-3" placeholder="Search courses" disabled>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control mb-3" disabled>
+                            <option value="">All Instructors</option>
+                            <option value="Dr. Jane Doe">Dr. Jane Doe</option>
+                            <option value="Dr. John Smith">Dr. John Smith</option>
+                            <option value="Dr. Emily Clark">Dr. Emily Clark</option>
+                            <option value="Dr. Michael Lee">Dr. Michael Lee</option>
+                            <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="courses-table-header">Course ID</th>
+                                        <th class="courses-table-header">Course Name</th>
+                                        <th class="courses-table-header">Instructor</th>
+                                        <th class="courses-table-header">Credits</th>
+                                        <th class="courses-table-header">Schedule</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="coursesTableBody">
+                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
+                                        <td class="courses-table-cell">SCI101</td>
+                                        <td class="courses-table-cell">Introduction to Biology</td>
+                                        <td class="courses-table-cell">Dr. Jane Doe</td>
+                                        <td class="courses-table-cell">3</td>
+                                        <td class="courses-table-cell">Mon, Wed, Fri - 9:00 AM to 10:30 AM</td>
+                                    </tr>
+                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
+                                        <td class="courses-table-cell">SCI102</td>
+                                        <td class="courses-table-cell">General Chemistry</td>
+                                        <td class="courses-table-cell">Dr. John Smith</td>
+                                        <td class="courses-table-cell">4</td>
+                                        <td class="courses-table-cell">Tue, Thu - 11:00 AM to 12:30 PM</td>
+                                    </tr>
+                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
+                                        <td class="courses-table-cell">SCI201</td>
+                                        <td class="courses-table-cell">Physics I</td>
+                                        <td class="courses-table-cell">Dr. Emily Clark</td>
+                                        <td class="courses-table-cell">4</td>
+                                        <td class="courses-table-cell">Mon, Wed - 1:00 PM to 2:30 PM</td>
+                                    </tr>
+                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
+                                        <td class="courses-table-cell">SCI202</td>
+                                        <td class="courses-table-cell">Organic Chemistry</td>
+                                        <td class="courses-table-cell">Dr. Michael Lee</td>
+                                        <td class="courses-table-cell">3</td>
+                                        <td class="courses-table-cell">Fri - 3:00 PM to 6:00 PM</td>
+                                    </tr>
+                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
+                                        <td class="courses-table-cell">SCI301</td>
+                                        <td class="courses-table-cell">Environmental Science</td>
+                                        <td class="courses-table-cell">Dr. Sarah Johnson</td>
+                                        <td class="courses-table-cell">3</td>
+                                        <td class="courses-table-cell">Mon, Wed, Fri - 10:30 AM to 12:00 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-         <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid profile-container">
-          <div class="adjust d-flex justify-content-between align-items-center">
-            <h1>
-              <img src="/images/admin/profile/online-learning.png" alt="Profile" class="img-fluid faded">Doe Your Details!</h1>
-              <p class="mt-3" style="font-size: 1.5rem;" class="reduce">
-                Student<span style="font-weight: 700; margin-right: 100px;" classs="reduce">/Student Detail</span>
-              </p>
-          </div>
-            <div class="row info">
-              <div class="col-md-4">
-                <h3 class="p-3">Profile</h3>
-              </div>
-                <div class="row no-gutters">
-                    <div class="col-md-12 cover-image">
-                      <img src="/images/try.jpg" alt="Cover Image" class="rounded">
-                    </div>
-                    <div class="profile-info">              
-                <img src="/images/absolut-0NNhN0jggvo-unsplash.jpg" alt="Profile Picture" class="rounded-circle profile-picture">
-                <h3 class="ms-3 profile-name">John Doe</h3>
-                <p class="text-muted department">Computer Science</p>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="col-md-5 personal-details">
-                <h3>Personal Details</h3>
-                <ul class="list-group">
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Email:
-                    <span class="email">johndoe@example.com</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Phone Number:
-                    <span class="phone-number">(123) 456-7890</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Gender:
-                    <span class="gender">Male</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Date of Birth:
-                    <span class="date-of-birth">01/01/2000</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Address:
-                    <span class="address">123 Main Street, New York, NY 12345</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    City:
-                    <span class="city">New York</span>
-                  </li>
-                  </ul>
-              </div>
-              <div class="col-md-7 about-me">
-                <h3>About Me</h3>
-                <p class="about-me-text">The whirring of the computer fan was a lullaby to me, not the chirping of crickets. Unlike other kids glued to cartoons, I was mesmerized by coding tutorials. Lines of code weren't just symbols; they were building blocks, tools to create something magical in a world of pixels. In my mind, I wasn't just watching a screen, I was building it.
-                  This fascination started with a simple question: "How does this work?" My insatiable curiosity led me to dismantle old electronics (much to my parents' dismay) and rebuild them in a way that, while sometimes Frankenstein-esque, still functioned. Lego sets became more than castles and spaceships; they were rudimentary robots controlled by my own rudimentary code. As I grow older, my tech affinity blossoms. I'm particularly captivated by the world of game development, dreaming of creating immersive worlds where players can explore and adventure. Every spare moment is spent devouring online tutorials, attending weekend coding workshops, and fiddling with my ever-growing collection of game design software. The internet, once a source of funny cat videos, has become a collaborative haven. I connect with other young tech enthusiasts, share our creations, and learn from each other's successes (and failures).
-
-                  My passion for tech goes beyond just a career choice. It's a relentless chase for knowledge, a desire to build things that not only entertain but also make a difference. I dream of creating games that [insert your specific dream for your games, e.g., challenge players to think critically, teach valuable problem-solving skills, or provide a platform for social connection].
-                  
-                  However, my journey won't be without its glitches. Coding can be frustrating, with lines that refuse to cooperate and ideas that fizzle out. But I, fueled by my unwavering passion, won't be deterred. I find inspiration in the stories of tech giants and the endless possibilities my creations hold.
-                  
-                  I am just one example of a young student with a bright future in tech. There are countless others like me, brimming with potential and fueled by curiosity, waiting to make our mark on the digital landscape. By nurturing our inquisitiveness and providing us with the right tools and guidance, we can be empowered to become the changemakers and innovators of tomorrow.</p>
-              </div>
-            </div>
-          </div>
+        
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+         <!-- Course Details Modal -->
+   
 
     </div>
-    </div>
-               <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Crestwood Academy. All rights reserved.</p>
-</footer>
-<!-- end of footer -->
+    
+        
 
-<!-- BACK TO TOP BUTTON  -->
-<a href="#" class="shadow btn-primary rounded-circle back-to-top">
-  <i class="bi bi-chevron-double-up"></i>
-</a>
-  
-      </div>
-    </div>
-  </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
   
 
 
@@ -354,6 +377,8 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 
-  </body>
 
+
+
+</body>
 </html>
