@@ -12354,6 +12354,37 @@ body {
   margin-bottom: 20px;
 }
 
+.courses-table-header, .courses-table-cell {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  margin-top: 1rem;
+}
+
+.badge {
+  font-size: 1em;
+}
+
+.text-danger {
+  color: #ff0000 !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f8f9fa;
+}
+
+.table thead th.projects-table-header, .table tbody td.projects-table-cell {
+  color: #212529;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

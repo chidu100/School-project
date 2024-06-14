@@ -106,7 +106,7 @@
            <!-- courses -->
           <div class="list-group-item list-group-item-action bg-light">
             <a
-                class="nav-link sidebar-link active-menu"
+                class="nav-link sidebar-link"
                 data-bs-toggle="collapse"
                 href="#courses"
               >
@@ -121,7 +121,7 @@
               <div class="collapse" id="courses">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="/admin/view-courses.html" class="nav-link px-3 active-menu"
+                    <a href="/admin/view-courses.html" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-list"></i
                       ></span>
@@ -146,10 +146,10 @@
            <!-- End of courses -->
 
            <!-- Projects -->
-           <a href="/admin/view-projects.html" class="list-group-item list-group-item-action bg-light">
-                <span class="me-2"><i class="bi bi-folder"></i></span>
-                <span>Projects</span>
-              </a>
+           <a href="/admin/view-projects.html" class="list-group-item list-group-item-action bg-light active-menu">
+            <span class="me-2"><i class="bi bi-folder"></i></span>
+            <span>Projects</span>
+          </a>
             <!-- end of projects -->
           
           <a href="#" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-calendar-event"></i
@@ -222,118 +222,120 @@
       
             <div class="container-fluid move">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h1 class="mt-4">Science Courses</h1>
-                    <div class="mt-4">
-                        <a href="/admin/edit-courses.html" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Edit Courses</a>
-                        <a href="/admin/add-courses.html" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i> Add Courses</a>
-                    </div>
+                    <h1 class="mt-4">Projects</h1>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-md-4">
-                        <input type="text" class="form-control mb-3" placeholder="Search courses">
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-control mb-3">
-                            <option value="">All Instructors</option>
-                            <option value="Dr. Jane Doe">Dr. Jane Doe</option>
-                            <option value="Dr. John Smith">Dr. John Smith</option>
-                            <option value="Dr. Emily Clark">Dr. Emily Clark</option>
-                            <option value="Dr. Michael Lee">Dr. Michael Lee</option>
-                            <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
+                <ul class="nav nav-tabs mt-4" id="projectTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="view-projects-tab" data-bs-toggle="tab" href="#view-projects" role="tab" aria-controls="view-projects" aria-selected="true">View Projects</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="edit-projects-tab" data-bs-toggle="tab" href="#edit-projects" role="tab" aria-controls="edit-projects" aria-selected="false"><span class="me-2"><i class="bi bi-pencil"></i></span>Edit Projects</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="add-projects-tab" data-bs-toggle="tab" href="#add-projects" role="tab" aria-controls="add-projects" aria-selected="false"><span class="me-2"><i class="bi bi-folder-plus"></i></span>Add Projects</a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4" id="projectTabContent">
+                    <div class="tab-pane fade show active" id="view-projects" role="tabpanel" aria-labelledby="view-projects-tab">
+                        <!-- View Projects content -->
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th class="courses-table-header">Course ID</th>
-                                        <th class="courses-table-header">Course Name</th>
-                                        <th class="courses-table-header">Instructor</th>
-                                        <th class="courses-table-header">Credits</th>
-                                        <th class="courses-table-header">Schedule</th>
+                                        <th class="projects-table-header">Project ID</th>
+                                        <th class="projects-table-header">Project Title</th>
+                                        <th class="projects-table-header">Instructor</th>
+                                        <th class="projects-table-header">Status</th>
                                     </tr>
                                 </thead>
-                                <tbody id="coursesTableBody">
-                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
-                                        <td class="courses-table-cell">SCI101</td>
-                                        <td class="courses-table-cell">Introduction to Biology</td>
-                                        <td class="courses-table-cell">Dr. Jane Doe</td>
-                                        <td class="courses-table-cell">3</td>
-                                        <td class="courses-table-cell">Mon, Wed, Fri - 9:00 AM to 10:30 AM</td>
+                                <tbody id="projectsTableBody">
+                                    <tr>
+                                        <td class="projects-table-cell">PRJ101</td>
+                                        <td class="projects-table-cell">Biology Research</td>
+                                        <td class="projects-table-cell">Dr. Jane Doe</td>
+                                        <td class="projects-table-cell">Completed</td>
                                     </tr>
-                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
-                                        <td class="courses-table-cell">SCI102</td>
-                                        <td class="courses-table-cell">General Chemistry</td>
-                                        <td class="courses-table-cell">Dr. John Smith</td>
-                                        <td class="courses-table-cell">4</td>
-                                        <td class="courses-table-cell">Tue, Thu - 11:00 AM to 12:30 PM</td>
+                                    <tr>
+                                        <td class="projects-table-cell">PRJ102</td>
+                                        <td class="projects-table-cell">Chemistry Experiment</td>
+                                        <td class="projects-table-cell">Dr. John Smith</td>
+                                        <td class="projects-table-cell">In Progress</td>
                                     </tr>
-                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
-                                        <td class="courses-table-cell">SCI201</td>
-                                        <td class="courses-table-cell">Physics I</td>
-                                        <td class="courses-table-cell">Dr. Emily Clark</td>
-                                        <td class="courses-table-cell">4</td>
-                                        <td class="courses-table-cell">Mon, Wed - 1:00 PM to 2:30 PM</td>
+                                    <tr>
+                                        <td class="projects-table-cell">PRJ201</td>
+                                        <td class="projects-table-cell">Physics Project</td>
+                                        <td class="projects-table-cell">Dr. Emily Clark</td>
+                                        <td class="projects-table-cell">Not Started</td>
                                     </tr>
-                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
-                                        <td class="courses-table-cell">SCI202</td>
-                                        <td class="courses-table-cell">Organic Chemistry</td>
-                                        <td class="courses-table-cell">Dr. Michael Lee</td>
-                                        <td class="courses-table-cell">3</td>
-                                        <td class="courses-table-cell">Fri - 3:00 PM to 6:00 PM</td>
+                                    <tr>
+                                        <td class="projects-table-cell">PRJ202</td>
+                                        <td class="projects-table-cell">Environmental Study</td>
+                                        <td class="projects-table-cell">Dr. Michael Lee</td>
+                                        <td class="projects-table-cell">Completed</td>
                                     </tr>
-                                    <tr data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
-                                        <td class="courses-table-cell">SCI301</td>
-                                        <td class="courses-table-cell">Environmental Science</td>
-                                        <td class="courses-table-cell">Dr. Sarah Johnson</td>
-                                        <td class="courses-table-cell">3</td>
-                                        <td class="courses-table-cell">Mon, Wed, Fri - 10:30 AM to 12:00 PM</td>
+                                    <tr>
+                                        <td class="projects-table-cell">PRJ301</td>
+                                        <td class="projects-table-cell">Technology Research</td>
+                                        <td class="projects-table-cell">Dr. Sarah Johnson</td>
+                                        <td class="projects-table-cell">In Progress</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                    <div class="tab-pane fade" id="edit-projects" role="tabpanel" aria-labelledby="edit-projects-tab">
+                        <!-- Edit Projects content -->
+                        <form class="admin mt-4" action="/admin/view-projects.html" method="post">
+                            <div class="form-group">
+                                <label for="projectID">Project ID <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="projectID" name="projectID" placeholder="Enter Project ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectTitle">Project Title <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="projectTitle" name="projectTitle" placeholder="Enter Project Title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectInstructor">Instructor <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="projectInstructor" name="projectInstructor" placeholder="Enter Instructor Name" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="add-projects" role="tabpanel" aria-labelledby="add-projects-tab">
+                        <!-- Add Projects content -->
+                        <form class="admin mt-4" action="/admin/view-projects.html" method="post">
+                            <div class="form-group">
+                                <label for="addProjectID">Project ID <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="addProjectID" name="addProjectID" placeholder="Enter Project ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="addProjectTitle">Project Title <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="addProjectTitle" name="addProjectTitle" placeholder="Enter Project Title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="addProjectInstructor">Instructor <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="addProjectInstructor" name="addProjectInstructor" placeholder="Enter Instructor Name" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        
         <!-- /#page-content-wrapper -->
+         <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">&copy; 2024 Crestwood Academy. All rights reserved.</span>
+        </div>
+    </footer>
     </div>
     <!-- /#wrapper -->
-         <!-- Course Details Modal -->
-   
 
-    </div>
+
+
     
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-  
-
-
-  
     
-
-
 
 
 
