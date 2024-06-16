@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Assignment Page</title>
+    <title>Crestwood Student Page</title>
     <link rel="shortcut icon" href="/images/logo/crestwood-academy-favicon-color.png" type="image/x-icon">
 </head>
   <body>
@@ -24,7 +24,7 @@
           ></span>
           <span>Dashboard</span></a>
           <!-- profile -->
-          <div class="list-group-item list-group-item-action bg-light ">
+          <div class="list-group-item list-group-item-action bg-light">
             <a
                 class="nav-link sidebar-link"
                 data-bs-toggle="collapse"
@@ -64,7 +64,7 @@
           <!-- Activities -->
           <div class="list-group-item list-group-item-action bg-light">
             <a
-                class="nav-link sidebar-link active-menu"
+                class="nav-link sidebar-link"
                 data-bs-toggle="collapse"
                 href="#layouts"
               >
@@ -87,7 +87,7 @@
                     </a>
                     </li>
                     <li>
-                      <a href="/admin/Exam-and-text.html" class="nav-link px-3 active-menu"><span class="me-2"><i class="bi bi-check-circle"></i
+                      <a href="/admin/Exam-and-text.html" class="nav-link px-3"><span class="me-2"><i class="bi bi-check-circle"></i
                         ></span>
                         <span>Exams and test</span>
                       </a>
@@ -121,7 +121,7 @@
               <div class="collapse" id="courses">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="/admin/view-courses.html" class="nav-link px-3">
+                    <a href="/admin/view-courses.html" class="nav-link px-3"
                       <span class="me-2"
                         ><i class="bi bi-list"></i
                       ></span>
@@ -147,12 +147,12 @@
 
            <!-- Projects -->
            <a href="/admin/view-projects.html" class="list-group-item list-group-item-action bg-light">
-            <span class="me-2"><i class="bi bi-folder"></i></span>
-            <span>Projects</span>
-          </a>
+                <span class="me-2"><i class="bi bi-folder"></i></span>
+                <span>Projects</span>
+              </a>
             <!-- end of projects -->
                    
-            <a href="/admin/upcoming-events.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-calendar-event"></i
+            <a href="/admin/upcoming-events.html" class="list-group-item list-group-item-action bg-light active-menu"><span class="me-2"><i class="bi bi-calendar-event"></i
               ></span>
               <span>Upcoming Events</span></a>
             <a href="/admin/school-invoice.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-receipt"></i
@@ -178,147 +178,105 @@
      
       <!-- Page Content -->
     <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <div class="row align-items-center bg-primary shadow fixed-top">
-          <div class="col-auto d-flex align-items-center">
-            <a class="navbar-brand ms-3 writing order2" href="#">
-              <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-              Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
-            </a>
-            <label for="menu-toggle" class="btn btn-primary text-white order1" id="toggle-button">
-              <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
-            </label>
-            
-          </div>
-          <div class="col">
-            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item Standardize">
-                    <div class="input-group mt-3">
-                      <span class="input-group-text"><button class="btn btn-block"><i class="bi bi-search"></i></button></span>
-                      <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Search">
-                        <label for="floatingInputGroup1">Search</label>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="btn-group p-3 orient">
-                      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                        <i class="bi bi-file-earmark-person-fill modest"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-                        <li><button class="dropdown-item" type="button"><a href="/admin/student-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
-                        <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
+        <div class="container-fluid">
+            <div class="row align-items-center bg-primary shadow fixed-top">
+              <div class="col-auto d-flex align-items-center">
+                <a class="navbar-brand ms-3 writing order2" href="#">
+                  <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
+                </a>
+                <label for="menu-toggle" class="btn btn-primary text-white order1" id="toggle-button">
+                  <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
+                </label>
+                
               </div>
-            </nav>
-          </div>
-        </div>
-  
-        <div class="container-fluid move">
-            <h1 class="mt-4">Upcoming Exams and Tests</h1>
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">Math Exam</h5>
-                                <small>Date: 2024-06-18 | Time: 10:00 AM</small>
-                            </div>
+              <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                      <li class="nav-item Standardize">
+                        <div class="input-group mt-3">
+                          <span class="input-group-text"><button class="btn btn-block"><i class="bi bi-search"></i></button></span>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Search">
+                            <label for="floatingInputGroup1">Search</label>
+                          </div>
                         </div>
-                        <div class="card-body">
-                            <p class="card-text">Chapter 1-4: Algebra, Geometry, Calculus.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Study Resources</a>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" id="mathExamReminder">
-                                <label class="form-check-label" for="mathExamReminder">Set Reminder</label>
-                            </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="btn-group p-3 orient">
+                          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <i class="bi bi-file-earmark-person-fill modest"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <li><button class="dropdown-item" type="button"><a href="/admin/student-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
+                            <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
+                          </ul>
                         </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">Science Test</h5>
-                                <small>Date: 2024-06-22 | Time: 1:00 PM</small>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Chapter 5-7: Physics, Chemistry, Biology.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Study Resources</a>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" id="scienceTestReminder">
-                                <label class="form-check-label" for="scienceTestReminder">Set Reminder</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="mb-0">History Quiz</h5>
-                                <small>Date: 2024-06-25 | Time: 9:00 AM</small>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">World War II and its impacts.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Study Resources</a>
-                            <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox" id="historyQuizReminder">
-                                <label class="form-check-label" for="historyQuizReminder">Set Reminder</label>
-                            </div>
-                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+      
+            <div class="container-fluid move">
+                <div class="hero">
+                    <div>
+                        <h1>Welcome to Crestwood Academy</h1>
+                        <p>Your future starts here. Join us for an incredible journey.</p>
                     </div>
                 </div>
-
-
-      
-
-
-
-
-
-
-
-            
-
-
-                    <!-- Footer -->
-                    <footer class=" mt-5 py-3 bg-light">
-                      <div class="container text-center">
-                          <span class="text-muted">&copy; 2024 Crestwood Academy. All rights reserved.</span>
-                      </div>
-                  </footer>
-<!-- end of footer -->
-
-<!-- BACK TO TOP BUTTON  -->
-<a href="#" class="shadow btn-primary rounded-circle back-to-top">
-  <i class="bi bi-chevron-double-up"></i>
-</a>
-  
-      </div>
+                <div class="event-details">
+                    <h2>Event Details</h2>
+                    <p><strong>Date and Time:</strong> March 25, 2024, 10:00 AM - 4:00 PM</p>
+                    <p><strong>Location:</strong> Crestwood Academy, Main Hall</p>
+                    <p><strong>Target Audience:</strong> Freshmen, Engineering Students</p>
+                    <p><strong>Registration:</strong> <a href="https://www.eventregistration.com">Register Here</a></p>
+                </div>
+                <div class="event-description">
+                    <h2>Event Description</h2>
+                    <p><strong>Goal and Theme:</strong> Join us for an exciting day of learning and networking. The event aims to introduce new students to the engineering department and provide valuable insights into the industry.</p>
+                    <p><strong>Activities:</strong> The day will include keynote speeches from industry leaders, interactive workshops, and networking opportunities. Don't miss the panel discussion on the future of engineering.</p>
+                    <p><strong>Benefits of Attending:</strong> Gain knowledge, meet peers and professionals, and get a head start on your academic journey. Attendees will receive a certificate of participation.</p>
+                </div>
+                <div class="call-to-action">
+                    <h2>Register Now</h2>
+                    <p>Don't miss out on this incredible opportunity. Click the link below to secure your spot.</p>
+                    <a href="https://www.eventregistration.com" class="btn btn-register">Register Here</a>
+                </div>
+                <div class="additional-info">
+                    <h2>Additional Information</h2>
+                    <p><strong>Contact Information:</strong> For inquiries, please contact us at <a href="mailto:events@crestwoodacademy.com">events@crestwoodacademy.com</a>.</p>
+                    <p><strong>Sponsors:</strong> Thank you to our sponsors for their generous support.</p>
+                    <p><strong>Follow Us:</strong> Stay updated by following us on social media: 
+                        <a href="https://www.facebook.com" class="text-decoration-none"><i class="bi bi-facebook"></i> Facebook</a>,
+                        <a href="https://www.twitter.com" class="text-decoration-none"><i class="bi bi-twitter"></i> Twitter</a>,
+                        <a href="https://www.instagram.com" class="text-decoration-none"><i class="bi bi-instagram"></i> Instagram</a>.
+                    </p>
+                    <p><strong>FAQ:</strong> Visit our <a href="https://www.crestwoodacademy.com/faq">FAQ page</a> for more information.</p>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+         
+        <footer class=" mt-5 py-3 bg-light">
+            <div class="container text-center">
+                <span class="text-muted">&copy; 2024 Crestwood Academy. All rights reserved.</span>
+            </div>
+        </footer>
     </div>
-  </div>
       
-  
+    <!-- /#wrapper -->
 
 
-  
+   
+
+
     
-
-
-
-
-
-
-
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 
-  </body>
+</body>
 
 </html>
-

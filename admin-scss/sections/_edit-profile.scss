@@ -114,10 +114,123 @@
     // margin-top: 30px;
     background-color: #f8f9fa;
 }
-
+.down{
+    bottom: 50px;
+}
 // for projects
 .table thead th.projects-table-header, .table tbody td.projects-table-cell {
     color: #212529;
     background-color: #e9ecef;
     border-color: #dee2e6;
+}
+
+// upcoming events
+.hero {
+    background: url('/images/events/event-banner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.event-details, .event-description, .call-to-action, .additional-info {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-details h2, .event-description h2, .call-to-action h2, .additional-info h2 {
+    margin-bottom: 1rem;
+}
+
+.btn-register {
+    background-color: #f85a40;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #d74b37;
+}
+
+
+// for school invoice 
+.overview, .invoice-list, .additional-info {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.overview h2, .invoice-list h2, .additional-info h2 {
+    margin-bottom: 1rem;
+}
+
+.overview-card {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.overview-card.overdue {
+    background-color: #ffcccc;
+}
+
+.overview-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-download {
+    background-color: #f85a40;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #d74b37;
+}
+
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: #f0f0f0;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
