@@ -12496,6 +12496,184 @@ body {
   margin-bottom: 1rem;
 }
 
+.upcoming-events, .class-schedule, .additional-info {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-events h2, .class-schedule h2, .additional-info h2 {
+  margin-bottom: 1rem;
+}
+
+.event-list, .schedule-table {
+  margin-top: 1rem;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-date {
+  font-weight: bold;
+  color: #f85a40;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.schedule-table th {
+  background-color: #f0f0f0;
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.btn-quick-link {
+  background-color: #f85a40;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  margin: 0.5rem 0;
+}
+
+.btn-quick-link:hover {
+  background-color: #d74b37;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f8f9fa;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header .date {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.calendar-view {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-table th, .calendar-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.calendar-table th {
+  background-color: #f0f0f0;
+}
+
+.calendar-table td.event {
+  background-color: #ffefef;
+  color: #f85a40;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #f85a40;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.blog-card {
+  margin: 1rem 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+}
+
+.blog-card-body {
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.blog-card-body img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.btn-quick-link {
+  background-color: #f85a40;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  margin: 0.5rem 0;
+}
+
+.btn-quick-link:hover {
+  background-color: #d74b37;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f8f9fa;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.draft, .published, .analytics, .additional-features {
+  margin-top: 2rem;
+}
+
+.total-posts, .draft-count, .recent-posts, .drafts-section, .published-posts, .traffic-overview, .top-posts, .engagement-metrics {
+  margin-bottom: 2rem;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
