@@ -9,222 +9,371 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Crestwood Student Page</title>
+    <title>Teacher Admin Dashboard</title>
     <link rel="shortcut icon" href="/images/logo/crestwood-academy-favicon-color.png" type="image/x-icon">
 </head>
-  <body>
-      <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Admin Dashboard</a>
-  </nav>
-
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Sidebar -->
-      <nav class="col-md-2 d-none d-md-block sidebar">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Profile
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Courses
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Students
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Messages
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/teacher-login.html">
-                Logout
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- Main Content -->
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 content">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Dashboard</h1>
-        </div>
-
-        <!-- Stats Cards -->
-        <div class="row mb-3">
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header">
-                Students
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">250</h5>
-                <p class="card-text">Total Students</p>
-              </div>
+<body>
+    <!-- Sidebar -->
+    <div class="d-flex" id="wrapper">
+        <input type="checkbox" id="menu-toggle" hidden>
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"><h3>Teacher <span style="color: #f85a40; font-weight: bolder;">Dashboard</span></h3></div>
+            <div class="list-group list-group-flush">
+                <a href="#class-overview" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-people"></i></span>Class Overview</a>
+                <a href="#announcements" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-megaphone"></i></span>Announcements</a>
+                <a href="#grading" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-clipboard-check"></i></span>Grading & Assessment</a>
+                <a href="#attendance" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-calendar-check"></i></span>Attendance</a>
+                <a href="#student-progress" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-bar-chart-line"></i></span>Student Progress</a>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header">
-                Courses
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">15</h5>
-                <p class="card-text">Total Courses</p>
-              </div>
+        </div>
+      
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <!-- Header -->
+                <div class="row align-items-center navbar-light bg-light shadow fixed-top bg-success-subtle">
+                    <div class="col-auto d-flex align-items-center">
+                        <a class="navbar-brand ms-3 writing order2" href="#">
+                            <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
+                        </a>
+                        <label for="menu-toggle" class="btn btn-success-subtle  order1" id="toggle-button">
+                            <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-success-subtle">
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                    <li class="nav-item Standardize">
+                                        <div class="input-group mt-3">
+                                            <span class="input-group-text"><button class="btn btn-block"><i class="bi bi-search"></i></button></span>
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Search">
+                                                <label for="floatingInputGroup1">Search</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="btn-group p-3 orient">
+                                            <button type="button" class="btn btn-success-subtle dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                                <i class="bi bi-file-earmark-person-fill modest"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                                                <li><button class="dropdown-item" type="button"><a href="/admin/teacher-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
+                                                <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- End of Header -->
+
+                <!-- Class Overview Section -->
+                <section id="class-overview" class="mt-5 pt-5 move">
+                    <div class="container mt-3">
+                        <h2 class="mb-4">Class Overview</h2>
+                        <div class="row">
+                            <!-- Class List and Quick Stats -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Class List</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Class 1
+                                                <span class="badge bg-primary rounded-pill">20 Students</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Class 2
+                                                <span class="badge bg-primary rounded-pill">25 Students</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Class 3
+                                                <span class="badge bg-primary rounded-pill">30 Students</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Quick Stats</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Number of Students: 75</p>
+                                        <p>Recent Activity: 10 Assignments Submitted</p>
+                                        <p>Class Average: 85%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Class Overview Section -->
+
+                <!-- Announcements & Communication Section -->
+                <section id="announcements" class="mt-5">
+                    <div class="container">
+                        <h2 class="mb-4">Announcements & Communication</h2>
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Create Announcement</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="announcementTitle" class="form-label">Title</label>
+                                                <input type="text" class="form-control" id="announcementTitle" placeholder="Enter title">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="announcementContent" class="form-label">Content</label>
+                                                <textarea class="form-control" id="announcementContent" rows="3" placeholder="Enter content"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Publish</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Direct Messaging</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="selectClass" class="form-label">Select Class</label>
+                                                <select class="form-select" id="selectClass">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Class 1</option>
+                                                    <option value="2">Class 2</option>
+                                                    <option value="3">Class 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="messageContent" class="form-label">Message</label>
+                                                <textarea class="form-control" id="messageContent" rows="3" placeholder="Enter message"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Announcements & Communication Section -->
+
+                <!-- Grading & Assessment Section -->
+                <section id="grading" class="mt-5">
+                    <div class="container">
+                        <h2 class="mb-4">Grading & Assessment</h2>
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Assignment Management</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="assignmentTitle" class="form-label">Title</label>
+                                                <input type="text" class="form-control" id="assignmentTitle" placeholder="Enter title">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="assignmentDescription" class="form-label">Description</label>
+                                                <textarea class="form-control" id="assignmentDescription" rows="3" placeholder="Enter description"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="dueDate" class="form-label">Due Date</label>
+                                                <input type="date" class="form-control" id="dueDate">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Assign</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Gradebook</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Student</th>
+                                                    <th scope="col">Assignment</th>
+                                                    <th scope="col">Grade</th>
+                                                    <th scope="col">Feedback</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>John Doe</td>
+                                                    <td>Assignment 1</td>
+                                                    <td>85</td>
+                                                    <td>Good job!</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jane Smith</td>
+                                                    <td>Assignment 1</td>
+                                                    <td>90</td>
+                                                    <td>Excellent work!</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Emily Johnson</td>
+                                                    <td>Assignment 1</td>
+                                                    <td>78</td>
+                                                    <td>Needs improvement.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Grading & Assessment Section -->
+
+                <!-- Attendance Management Section -->
+                <section id="attendance" class="mt-5">
+                    <div class="container">
+                        <h2 class="mb-4">Attendance Management</h2>
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Attendance Tracker</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="selectClassAttendance" class="form-label">Select Class</label>
+                                                <select class="form-select" id="selectClassAttendance">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Class 1</option>
+                                                    <option value="2">Class 2</option>
+                                                    <option value="3">Class 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="selectDate" class="form-label">Select Date</label>
+                                                <input type="date" class="form-control" id="selectDate">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="attendanceList" class="form-label">Attendance</label>
+                                                <textarea class="form-control" id="attendanceList" rows="3" placeholder="Enter attendance (e.g., John Doe: Present, Jane Smith: Absent)"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Save</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Late/Absent Reporting</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="selectClassReport" class="form-label">Select Class</label>
+                                                <select class="form-select" id="selectClassReport">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Class 1</option>
+                                                    <option value="2">Class 2</option>
+                                                    <option value="3">Class 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="dateRange" class="form-label">Date Range</label>
+                                                <input type="text" class="form-control" id="dateRange" placeholder="Enter date range (e.g., 01/01/2023 - 01/31/2023)">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Generate Report</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Attendance Management Section -->
+
+                <!-- Student Progress & Analytics Section -->
+                <section id="student-progress" class="mt-5">
+                    <div class="container">
+                        <h2 class="mb-4">Student Progress & Analytics</h2>
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Individual Student View</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="selectStudent" class="form-label">Select Student</label>
+                                                <select class="form-select" id="selectStudent">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">John Doe</option>
+                                                    <option value="2">Jane Smith</option>
+                                                    <option value="3">Emily Johnson</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="studentPerformance" class="form-label">Performance</label>
+                                                <textarea class="form-control" id="studentPerformance" rows="3" placeholder="Enter performance details"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">View</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Class Progress Reports</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="selectClassProgress" class="form-label">Select Class</label>
+                                                <select class="form-select" id="selectClassProgress">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Class 1</option>
+                                                    <option value="2">Class 2</option>
+                                                    <option value="3">Class 3</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Generate Report</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Student Progress & Analytics Section -->
             </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header">
-                Messages
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">45</h5>
-                <p class="card-text">New Messages</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header">
-                Notifications
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">12</h5>
-                <p class="card-text">New Notifications</p>
-              </div>
-            </div>
-          </div>
+ 
         </div>
-
-        <!-- Course Management Table -->
-        <h2>Course Management</h2>
-        <div class="d-flex justify-content-between mb-2">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#addCourseModal">Add Course</button>
-        </div>
-        <div class="table-responsive">
-          <table class="table table-striped table-sm">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Course Name</th>
-                <th>Enrolled Students</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mathematics</td>
-                <td>120</td>
-                <td>Active</td>
-                <td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCourseModal">Edit</button></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Physics</td>
-                <td>80</td>
-                <td>Inactive</td>
-                <td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCourseModal">Edit</button></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Chemistry</td>
-                <td>100</td>
-                <td>Active</td>
-                <td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCourseModal">Edit</button></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Biology</td>
-                <td>90</td>
-                <td>Active</td>
-                <td><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCourseModal">Edit</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Students Table -->
-        <h2>Student Management</h2>
-        <div class="d-flex justify-content-between mb-2">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#addStudentModal">Add Student</button>
-        </div>
-        <div class="table-responsive">
-          <table class="table table-striped table-sm">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Student Name</th>
-                <th>Course</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>Mathematics</td>
-                <td>Active</td>
-                <td><button class="btn btn-sm btn-primary">Edit</button></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>Physics</td>
-                <td>Inactive</td>
-                <td><button class="btn btn-sm btn-primary">Edit</button></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Michael Brown</td>
-                <td>Chemistry</td>
-                <td>Active</td>
-                <td><button class="btn btn-sm btn-primary">Edit</button></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Emily Davis</td>
-                <td>Biology</td>
-                <td>Active</td>
-                <td><button class="btn btn-sm btn-primary">Edit</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-
-
-        
-
-      </main>
+  
+        <!-- BACK TO TOP BUTTON  -->
+<a href="#" class="shadow btn-primary rounded-circle back-to-top">
+  <i class="bi bi-chevron-double-up"></i>
+</a>
     </div>
-  </div>
-
-
-
-
-
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
