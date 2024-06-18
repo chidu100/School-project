@@ -12736,6 +12736,69 @@ body {
     height: auto;
   }
 }
+.library-resource-card {
+  border: none;
+}
+
+.library-resource-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.library-resource-title {
+  font-weight: 600;
+}
+
+.library-resource-author {
+  font-weight: 400;
+}
+
+.library-filter-group .library-filter-btn {
+  border-color: #f85a40;
+  color: #f85a40;
+}
+
+.library-filter-group .library-filter-btn:hover {
+  background-color: #f85a40;
+  color: #fff;
+}
+
+.library-search-btn {
+  background-color: #f85a40;
+  border: none;
+}
+
+.library-search-btn:hover {
+  background-color: #e74c3c;
+}
+
+.library-add-resource {
+  background-color: #2c3e50;
+  border: none;
+}
+
+.library-add-resource:hover {
+  background-color: #34495e;
+}
+
+.library-star-btn {
+  background-color: #f85a40;
+  border: none;
+}
+
+.library-star-btn:hover {
+  background-color: #e74c3c;
+}
+
+.library-download-btn {
+  background-color: #2c3e50;
+  border: none;
+}
+
+.library-download-btn:hover {
+  background-color: #34495e;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

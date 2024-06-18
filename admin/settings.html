@@ -121,7 +121,7 @@
               <div class="collapse" id="courses">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="/admin/view-courses.html" class="nav-link px-3"
+                    <a href="/admin/view-courses.html" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-list"></i
                       ></span>
@@ -147,15 +147,15 @@
 
            <!-- Projects -->
            <a href="/admin/view-projects.html" class="list-group-item list-group-item-action bg-light">
-                <span class="me-2"><i class="bi bi-folder"></i></span>
-                <span>Projects</span>
-              </a>
+            <span class="me-2"><i class="bi bi-folder"></i></span>
+            <span>Projects</span>
+          </a>
             <!-- end of projects -->
                    
             <a href="/admin/upcoming-events.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-calendar-event"></i
               ></span>
               <span>Upcoming Events</span></a>
-            <a href="/admin/school-invoice.html" class="list-group-item list-group-item-action bg-light active-menu"><span class="me-2"><i class="bi bi-receipt"></i
+            <a href="/admin/school-invoice.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-receipt"></i
               ></span>
               <span>School Invoice</span></a>
             <a href="/admin/school-calendar.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-calendar"></i
@@ -167,7 +167,7 @@
             <a href="/admin/library.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-archive"></i
               ></span>
               <span>Library</span></a>
-            <a href="/admin/settings.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-gear"></i
+            <a href="/admin/settings.html" class="list-group-item list-group-item-action bg-light active-menu"><span class="me-2"><i class="bi bi-gear"></i
               ></span>
               <span>Settings</span></a>
           <a href="/admin/student-login.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-door-closed-fill"></i
@@ -220,135 +220,129 @@
               </div>
             </div>
       
-            <div class="container-fluid move">
-                <div class="overview">
-                    <h2>Overview</h2>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="overview-card">
-                                <div class="overview-card-body">
-                                    <p><strong>Total Outstanding Invoices</strong></p>
-                                    <p class="display-4">15</p>
+            <div class="container-fluid move settings-page">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h1 class="display-4">Settings</h1>
+                        <p class="lead">Manage your account settings, notifications, and privacy preferences</p>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <ul class="nav nav-tabs" id="settingsTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="account-settings-tab" data-bs-toggle="tab" data-bs-target="#account-settings" type="button" role="tab" aria-controls="account-settings" aria-selected="true">Account</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="notification-settings-tab" data-bs-toggle="tab" data-bs-target="#notification-settings" type="button" role="tab" aria-controls="notification-settings" aria-selected="false">Notifications</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="privacy-settings-tab" data-bs-toggle="tab" data-bs-target="#privacy-settings" type="button" role="tab" aria-controls="privacy-settings" aria-selected="false">Privacy</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="settingsTabContent">
+                            <div class="tab-pane fade show active" id="account-settings" role="tabpanel" aria-labelledby="account-settings-tab">
+                                <div class="card mt-4">
+                                    <div class="card-header">
+                                        <h5>Account Settings</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="username" class="form-label">Username</label>
+                                                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="notification-settings" role="tabpanel" aria-labelledby="notification-settings-tab">
+                                <div class="card mt-4">
+                                    <div class="card-header">
+                                        <h5>Notification Settings</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-check form-switch mb-3">
+                                                <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                                <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-3">
+                                                <input class="form-check-input" type="checkbox" id="smsNotifications">
+                                                <label class="form-check-label" for="smsNotifications">SMS Notifications</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-3">
+                                                <input class="form-check-input" type="checkbox" id="pushNotifications" checked>
+                                                <label class="form-check-label" for="pushNotifications">Push Notifications</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="privacy-settings" role="tabpanel" aria-labelledby="privacy-settings-tab">
+                                <div class="card mt-4">
+                                    <div class="card-header">
+                                        <h5>Privacy Settings</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" id="profileVisibility" checked>
+                                                <label class="form-check-label" for="profileVisibility">Profile Visibility</label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" id="searchVisibility">
+                                                <label class="form-check-label" for="searchVisibility">Search Visibility</label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" id="dataSharing">
+                                                <label class="form-check-label" for="dataSharing">Data Sharing</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="overview-card">
-                                <div class="overview-card-body">
-                                    <p><strong>Total Invoice Amount</strong></p>
-                                    <p class="display-4">$12,500</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="overview-card overdue">
-                                <div class="overview-card-body">
-                                    <p><strong>Overdue Invoices</strong></p>
-                                    <p class="display-4">5</p>
-                                    <p>Total Overdue Amount: $2,500</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-
-                <div class="filter-section">
-                    <div>
-                        <label for="dateRange">Date Range:</label>
-                        <input type="date" id="dateRange" class="form-control">
-                    </div>
-                    <div>
-                        <label for="studentSearch">Student Search:</label>
-                        <input type="text" id="studentSearch" class="form-control" placeholder="Enter student name or ID">
-                    </div>
-                    <div>
-                        <label for="statusFilter">Status Filter:</label>
-                        <select id="statusFilter" class="form-control">
-                            <option>All</option>
-                            <option>Paid</option>
-                            <option>Unpaid</option>
-                            <option>Overdue</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="invoice-list">
-                    <h2>Invoice List</h2>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Invoice Number</th>
-                                <th>Student Name</th>
-                                <th>Grade Level</th>
-                                <th>Issue Date</th>
-                                <th>Due Date</th>
-                                <th>Amount Due</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>INV-001</td>
-                                <td>John Doe</td>
-                                <td>10</td>
-                                <td>01/15/2024</td>
-                                <td>02/15/2024</td>
-                                <td>$500</td>
-                                <td>Unpaid</td>
-                            </tr>
-                            <tr>
-                                <td>INV-002</td>
-                                <td>Jane Smith</td>
-                                <td>11</td>
-                                <td>01/20/2024</td>
-                                <td>02/20/2024</td>
-                                <td>$600</td>
-                                <td>Paid</td>
-                            </tr>
-                            <tr class="clickable-row">
-                                <td>INV-003</td>
-                                <td>Michael Brown</td>
-                                <td>9</td>
-                                <td>01/25/2024</td>
-                                <td>02/25/2024</td>
-                                <td>$700</td>
-                                <td>Overdue</td>
-                            </tr>
-                            <!-- Add more rows as needed -->
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="additional-info">
-                    <h2>Additional Information</h2>
-                    <p><strong>Download Options:</strong> 
-                        <a href="#" class="btn btn-download">Download CSV</a>
-                        <a href="#" class="btn btn-download">Download PDF</a>
-                    </p>
-                    <p><strong>Payment Methods:</strong> Payments can be made online via our payment portal, or in cash at the school office.</p>
-                    <p><strong>Help/Contact Information:</strong> For invoice-related inquiries, please contact <a href="mailto:billing@crestwoodacademy.com">billing@crestwoodacademy.com</a>.</p>
                 </div>
             </div>
+            <!-- End of Settings Page Content -->
+            <footer class="mt-auto py-3 bg-light">
+                <div class="container text-center">
+                    <span class="text-muted">&copy; 2024 Crestwood Academy. All rights reserved.</span>
+                </div>
+            </footer>
         </div>
-        <!-- /#page-content-wrapper -->
-          <!-- Footer -->
-    <footer class="mt-auto py-3 bg-light">
-        <div class="container text-center">
-            <span class="text-muted">&copy; 2024 Crestwood Academy. All rights reserved.</span>
-        </div>
-    </footer>
-    </div>
-    <!-- /#wrapper -->
-
-   
-
-   
 
 
-    
-<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 
-</body>
 
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            </body>
+            </html>
