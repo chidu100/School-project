@@ -12636,6 +12636,11 @@ body {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.blog-card-body img:hover {
+  transform: scale(1.05);
 }
 
 .btn-quick-link {
@@ -12653,15 +12658,6 @@ body {
   background-color: #d74b37;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background-color: #f8f9fa;
-}
-
 .table th, .table td {
   vertical-align: middle;
 }
@@ -12674,6 +12670,72 @@ body {
   margin-bottom: 2rem;
 }
 
+.draft, .published, .analytics, .additional-features {
+  margin-top: 2rem;
+}
+
+.recent-posts-section {
+  margin-top: 2rem;
+}
+
+.recent-post-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+.recent-post-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.recent-post-card img:hover {
+  transform: scale(1.03);
+}
+
+.recent-post-card .recent-post-description {
+  margin-top: 1rem;
+}
+
+.recent-post-card .recent-post-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.recent-post-card .recent-post-icons .icon {
+  display: flex;
+  align-items: center;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.recent-post-card .recent-post-icons .icon i {
+  margin-right: 0.25rem;
+}
+
+.recent-post-card .recent-post-icons .icon:hover {
+  color: #f85a40;
+}
+
+.recent-post-card .recent-post-icons .icon:active {
+  color: #d74b37;
+}
+
+@media (max-width: 576px) {
+  .recent-post-card {
+    margin-bottom: 1rem;
+  }
+  .recent-post-card img {
+    height: auto;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
 }
