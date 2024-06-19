@@ -69,11 +69,21 @@ This project consists of a comprehensive website for Crestwood Academy, includin
 - [Font Awesome](https://fontawesome.com/)
 - [SASS](https://sass-lang.com/)
 
-
 ### Installation
 
-1. **Clone the Repository**
+1. **Install Dependencies**
 
    ```bash
-   git clone https://github.com/your-username/crestwood-academy.git
-   cd crestwood-academy
+    npm install
+
+2. **Run the project**
+
+  ```bash
+  npm start
+
+ 3. **Compile SASS** 
+
+   ```bash
+   npm run sass
+
+
