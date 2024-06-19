@@ -81,9 +81,17 @@ This project consists of a comprehensive website for Crestwood Academy, includin
   ```bash
   npm start
 
- 3. **Compile SASS** 
+
+3. **Compile SASS** 
+   If you are using SASS, you can compile your SASS files to CSS using the following command:
 
    ```bash
    npm run sass
+
+Ensure you have a script in your package.json for compiling SASS:
+ 
+ \`\`\`"scripts": {
+  "sass": "sass --watch sass:css"
+}
 
 
