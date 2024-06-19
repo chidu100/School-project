@@ -77,22 +77,31 @@ This project consists of a comprehensive website for Crestwood Academy, includin
     npm install
 
 2. **Run the project**
-
-  ```bash
-  npm start
-
-
-
-3. **Compile SASS** 
-   If you are using SASS, you can compile your SASS files to CSS using the following command:
+    ```bash
+    npm start
+  
+3. **Compile SASS**
+  If you are using SASS, you can compile your SASS files to CSS using the following command:
 
    ```bash
-   npm run sass
+   npm run sass  
+     Ensure you have a script in your package.json for compiling SASS:
+                     ```bash
+                  "scripts": {
+                  "sass": "sass --watch sass:css"
+                  }
+       
 
-Ensure you have a script in your package.json for compiling SASS:
- 
- \`\`\`"scripts": {
-  "sass": "sass --watch sass:css"
-}
+
+
+
+### Explanation
+
+1. **Features Section**: Updated to include login pages for the student, teacher, and parent dashboards.
+2. **Setup Instructions**: Added instructions for setting up the SASS environment.
+3. **Directory Structure**: Updated to reflect the addition of SASS files and login pages.
+4. **Usage**: Updated to include navigation instructions for the login and dashboard pages for students, teachers, and parents.
+
+
 
 
