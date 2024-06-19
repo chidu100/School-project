@@ -23,6 +23,9 @@
                 <a href="#school-activities" class="list-group-item list-group-item-action bg-light parent-dashboard-link"><span class="me-2"><i class="bi bi-calendar-event"></i></span>School Activities</a>
                 <a href="#online-meetings" class="list-group-item list-group-item-action bg-light parent-dashboard-link"><span class="me-2"><i class="bi bi-camera-video"></i></span>Online Meetings</a>
                 <a href="#resource-center" class="list-group-item list-group-item-action bg-light parent-dashboard-link"><span class="me-2"><i class="bi bi-journal-bookmark"></i></span>Resource Center</a>
+                <a href="/admin/parent-login.html" class="list-group-item list-group-item-action bg-light"><span class="me-2"><i class="bi bi-door-closed-fill"></i
+                    ></span>
+                    <span>Logout</span></a>
             </div>
         </div>
       
@@ -30,18 +33,18 @@
         <div id="page-content-wrapper" class="parent-dashboard">
             <div class="container-fluid">
                 <!-- Header -->
-                <div class="row align-items-center bg-primary shadow fixed-top">
+                <div class="row align-items-center bg-primary-subtle shadow fixed-top">
                     <div class="col-auto d-flex align-items-center">
                         <a class="navbar-brand ms-3 writing order2" href="#">
                             <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                             Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
                         </a>
-                        <label for="menu-toggle" class="btn btn-primary text-white order1" id="toggle-button">
+                        <label for="menu-toggle" class="btn btn-primary-subtle text-white order1" id="toggle-button">
                             <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
                         </label>
                     </div>
                     <div class="col">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle">
                             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                                     <li class="nav-item Standardize">
@@ -55,7 +58,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <div class="btn-group p-3 orient">
-                                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                            <button type="button" class="btn btn-primary-subtle dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                                                 <i class="bi bi-file-earmark-person-fill modest"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
@@ -96,7 +99,7 @@
                                             <li class="list-group-item">Name: John Doe</li>
                                             <li class="list-group-item">Grade Level: 5</li>
                                             <li class="list-group-item">Homeroom Teacher: Mrs. Smith</li>
-                                            <li class="list-group-item">Contact Information: john.doe@example.com</li>
+                                            <li class="list-group-item">Contact Information: john.doe@crestwood.com</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -110,8 +113,8 @@
                                     <div class="card-body">
                                         <h6>Assignment List</h6>
                                         <ul class="list-group mb-3">
-                                            <li class="list-group-item">Math Homework - Due: 12/12/2024 - <a href="#">Download</a></li>
-                                            <li class="list-group-item">Science Project - Due: 14/12/2024 - <a href="#">Download</a></li>
+                                            <li class="list-group-item">Math Homework - Due: 12/07/2024 - <a href="#">Download</a></li>
+                                            <li class="list-group-item">Science Project - Due: 14/07/2024 - <a href="#">Download</a></li>
                                         </ul>
                                         <h6>Gradebook</h6>
                                         <table class="table">
@@ -162,7 +165,7 @@
                                         <h5>School Calendar</h5>
                                     </div>
                                     <div class="card-body">
-                                        <div id="school-calendar"></div>
+                                        <div id="school-calendar" class="calendar"></div>
                                     </div>
                                 </div>
                             </div>
@@ -174,9 +177,9 @@
                                     </div>
                                     <div class="card-body">
                                         <ul class="list-group">
-                                            <li class="list-group-item">PTA Meeting: 15/12/2024</li>
-                                            <li class="list-group-item">School Play: 20/12/2024</li>
-                                            <li class="list-group-item">Holiday Break: 24/12/2024 - 01/01/2025</li>
+                                            <li class="list-group-item">PTA Meeting: 15/07/2024</li>
+                                            <li class="list-group-item">School Play: 20/07/2024</li>
+                                            <li class="list-group-item">Holiday Break: 24/09/2024 - 01/11/2024</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -263,34 +266,45 @@
                     </div>
                 </footer>
                 <!-- End of Footer -->
+
+                <!-- BACK TO TOP BUTTON  -->
+<a href="#" class="shadow btn-primary rounded-circle back-to-top">
+    <i class="bi bi-chevron-double-up"></i>
+  </a>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('school-calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                events: [
-                    {
-                        title: 'PTA Meeting',
-                        start: '2024-12-15'
-                    },
-                    {
-                        title: 'School Play',
-                        start: '2024-12-20'
-                    },
-                    {
-                        title: 'Holiday Break',
-                        start: '2024-12-24',
-                        end: '2025-01-01'
-                    }
-                ]
-            });
-            calendar.render();
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('school-calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: [
+                {
+                    title: 'PTA Meeting',
+                    start: '2024-06-30'
+                },
+                {
+                    title: 'School Play',
+                    start: '2024-07-05'
+                },
+                {
+                    title: 'Holiday Break',
+                    start: '2024-07-24',
+                    end: '2024-09-09'
+                }
+            ],
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            themeSystem: 'bootstrap'
         });
-    </script>
+        calendar.render();
+    });
+</script>
 </body>
 </html>
