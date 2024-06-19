@@ -1,35 +1,34 @@
 @use '../custom' as *;
 
-
-.teacher-dashboard-card {
+.parent-dashboard-card {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .teacher-dashboard-card .card-header {
+  .parent-dashboard-card .card-header {
     background-color: #f85a40;
     color: #fff;
     font-weight: 600;
   }
   
-  .teacher-dashboard-btn {
+  .parent-dashboard-btn {
     background-color: #f85a40;
     border: none;
   }
   
-  .teacher-dashboard-btn:hover {
+  .parent-dashboard-btn:hover {
     background-color: #e74c3c;
   }
   
-  .teacher-dashboard-section {
+  .parent-dashboard-section {
     margin-top: 40px;
   }
   
-  .teacher-dashboard-link {
+  .parent-dashboard-link {
     cursor: pointer;
   }
   
-  .teacher-dashboard-link.active {
+  .parent-dashboard-link.active {
     background-color: #f85a40;
     border-color: #f85a40;
   }
@@ -39,8 +38,12 @@
     color: #fff;
   }
   
-  .teacher-dashboard-footer {
+  .parent-dashboard-footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+  }
+  
+  .text-center {
+    text-align: center;
   }

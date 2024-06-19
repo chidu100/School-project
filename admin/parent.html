@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/admin-scss/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Parent Admin Dashboard</title>
+    <link rel="shortcut icon" href="/images/logo/crestwood-academy-favicon-color.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="d-flex" id="wrapper">
+        <input type="checkbox" id="menu-toggle" hidden>
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"><h3>Parent <span style="color: #f85a40; font-weight: bolder;">Dashboard</span></h3></div>
+            <div class="list-group list-group-flush">
+                <a href="#student-information" class="list-group-item list-group-item-action bg-light parent-dashboard-link"><span class="me-2"><i class="bi bi-person"></i></span>Student Information</a>
+                <a href="#school-activities" class="list-group-item list-group-item-action bg-light parent-dashboard-link"><span class="me-2"><i class="bi bi-calendar-event"></i></span>School Activities</a>
+                <a href="#online-meetings" class="list-group-item list-group-item-action bg-light parent-dashboard-link"><span class="me-2"><i class="bi bi-camera-video"></i></span>Online Meetings</a>
+                <a href="#resource-center" class="list-group-item list-group-item-action bg-light parent-dashboard-link"><span class="me-2"><i class="bi bi-journal-bookmark"></i></span>Resource Center</a>
+            </div>
+        </div>
+      
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="parent-dashboard">
+            <div class="container-fluid">
+                <!-- Header -->
+                <div class="row align-items-center bg-primary shadow fixed-top">
+                    <div class="col-auto d-flex align-items-center">
+                        <a class="navbar-brand ms-3 writing order2" href="#">
+                            <img src="/images/logo/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Crestwood Academy<span style="color: #f85a40; font-weight: bolder;">.</span>
+                        </a>
+                        <label for="menu-toggle" class="btn btn-primary text-white order1" id="toggle-button">
+                            <i class="bi bi-list" style="color: black; font-weight: bolder; font-size: 2.3rem;"></i>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                    <li class="nav-item Standardize">
+                                        <div class="input-group mt-3">
+                                            <span class="input-group-text"><button class="btn btn-block"><i class="bi bi-search"></i></button></span>
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Search">
+                                                <label for="floatingInputGroup1">Search</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="btn-group p-3 orient">
+                                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                                <i class="bi bi-file-earmark-person-fill modest"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                                                <li><button class="dropdown-item" type="button"><a href="/admin/parent-login.html" style="color: black; text-decoration: none;"><i class="bi bi-box-arrow-left pe-2"></i>Logout</a></button></li>
+                                                <li><button class="dropdown-item" type="button"><i class="bi bi-gear pe-2"></i>Settings</button></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- End of Header -->
+
+                <!-- Page Summary -->
+                <section class="mt-5 pt-5 text-center">
+                    <div class="container mt-3">
+                        <h1 class="display-4">Parent Admin Dashboard</h1>
+                        <p class="lead">The Parent Admin Dashboard provides parents with a comprehensive view of their child's academic performance, school activities, and communication tools. It enables parents to stay informed and engaged with their child's education through an interactive and user-friendly interface.</p>
+                    </div>
+                </section>
+                <!-- End of Page Summary -->
+
+                <!-- Student Information Section -->
+                <section id="student-information" class="mt-5 pt-5 parent-dashboard-section">
+                    <div class="container">
+                        <h2 class="mb-4">Student Information</h2>
+                        <div class="row">
+                            <!-- Child Information -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="card parent-dashboard-card">
+                                    <div class="card-header">
+                                        <h5>Child Information</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Name: John Doe</li>
+                                            <li class="list-group-item">Grade Level: 5</li>
+                                            <li class="list-group-item">Homeroom Teacher: Mrs. Smith</li>
+                                            <li class="list-group-item">Contact Information: john.doe@example.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Academic Performance -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="card parent-dashboard-card">
+                                    <div class="card-header">
+                                        <h5>Academic Performance</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <h6>Assignment List</h6>
+                                        <ul class="list-group mb-3">
+                                            <li class="list-group-item">Math Homework - Due: 12/12/2024 - <a href="#">Download</a></li>
+                                            <li class="list-group-item">Science Project - Due: 14/12/2024 - <a href="#">Download</a></li>
+                                        </ul>
+                                        <h6>Gradebook</h6>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Subject</th>
+                                                    <th scope="col">Grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Math</td>
+                                                    <td>85</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Science</td>
+                                                    <td>90</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>English</td>
+                                                    <td>78</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h6>Teacher Feedback</h6>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Math: Great improvement!</li>
+                                            <li class="list-group-item">Science: Excellent project work!</li>
+                                            <li class="list-group-item">English: Needs more practice in writing.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Student Information Section -->
+
+                <!-- School Activities & Communication Section -->
+                <section id="school-activities" class="mt-5 parent-dashboard-section">
+                    <div class="container">
+                        <h2 class="mb-4">School Activities & Communication</h2>
+                        <div class="row">
+                            <!-- School Calendar -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="card parent-dashboard-card">
+                                    <div class="card-header">
+                                        <h5>School Calendar</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="school-calendar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Announcements -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="card parent-dashboard-card">
+                                    <div class="card-header">
+                                        <h5>Announcements</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">PTA Meeting: 15/12/2024</li>
+                                            <li class="list-group-item">School Play: 20/12/2024</li>
+                                            <li class="list-group-item">Holiday Break: 24/12/2024 - 01/01/2025</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of School Activities & Communication Section -->
+
+                <!-- Online Meeting Scheduling Section -->
+                <section id="online-meetings" class="mt-5 parent-dashboard-section">
+                    <div class="container">
+                        <h2 class="mb-4">Online Meetings</h2>
+                        <div class="row">
+                            <!-- Meeting Request System -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="card parent-dashboard-card">
+                                    <div class="card-header">
+                                        <h5>Request a Meeting</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="selectTeacher" class="form-label">Select Teacher</label>
+                                                <select class="form-select" id="selectTeacher">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Mrs. Smith</option>
+                                                    <option value="2">Mr. Johnson</option>
+                                                    <option value="3">Ms. Brown</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="meetingDate" class="form-label">Propose Date & Time</label>
+                                                <input type="datetime-local" class="form-control" id="meetingDate">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary parent-dashboard-btn">Request Meeting</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Meeting History -->
+                            <div class="col-lg-6 mb-4">
+                                <div class="card parent-dashboard-card">
+                                    <div class="card-header">
+                                        <h5>Meeting History</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Meeting with Mrs. Smith on 10/11/2024 - <a href="#">View Notes</a></li>
+                                            <li class="list-group-item">Meeting with Mr. Johnson on 12/10/2024 - <a href="#">View Notes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Online Meeting Scheduling Section -->
+
+                <!-- Resource Center Section -->
+                <section id="resource-center" class="mt-5 parent-dashboard-section">
+                    <div class="container">
+                        <h2 class="mb-4">Resource Center</h2>
+                        <div class="card parent-dashboard-card">
+                            <div class="card-header">
+                                <h5>Resources</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="#">School Policies</a></li>
+                                    <li class="list-group-item"><a href="#">Curriculum Outlines</a></li>
+                                    <li class="list-group-item"><a href="#">Educational Resources</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Resource Center Section -->
+
+                <!-- Footer -->
+                <footer class=" mt-auto py-3 bg-light">
+                    <div class="container text-center">
+                        <span class="text-muted">&copy; 2024 Crestwood Academy. All rights reserved.</span>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('school-calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    {
+                        title: 'PTA Meeting',
+                        start: '2024-12-15'
+                    },
+                    {
+                        title: 'School Play',
+                        start: '2024-12-20'
+                    },
+                    {
+                        title: 'Holiday Break',
+                        start: '2024-12-24',
+                        end: '2025-01-01'
+                    }
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>

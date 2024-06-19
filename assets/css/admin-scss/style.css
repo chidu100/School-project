@@ -12799,6 +12799,98 @@ body {
   background-color: #34495e;
 }
 
+.teacher-dashboard-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-dashboard-card .card-header {
+  background-color: #f85a40;
+  color: #fff;
+  font-weight: 600;
+}
+
+.teacher-dashboard-btn {
+  background-color: #f85a40;
+  border: none;
+}
+
+.teacher-dashboard-btn:hover {
+  background-color: #e74c3c;
+}
+
+.teacher-dashboard-section {
+  margin-top: 40px;
+}
+
+.teacher-dashboard-link {
+  cursor: pointer;
+}
+
+.teacher-dashboard-link.active {
+  background-color: #f85a40;
+  border-color: #f85a40;
+}
+
+.table thead {
+  background-color: #f85a40;
+  color: #fff;
+}
+
+.teacher-dashboard-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.parent-dashboard-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.parent-dashboard-card .card-header {
+  background-color: #f85a40;
+  color: #fff;
+  font-weight: 600;
+}
+
+.parent-dashboard-btn {
+  background-color: #f85a40;
+  border: none;
+}
+
+.parent-dashboard-btn:hover {
+  background-color: #e74c3c;
+}
+
+.parent-dashboard-section {
+  margin-top: 40px;
+}
+
+.parent-dashboard-link {
+  cursor: pointer;
+}
+
+.parent-dashboard-link.active {
+  background-color: #f85a40;
+  border-color: #f85a40;
+}
+
+.table thead {
+  background-color: #f85a40;
+  color: #fff;
+}
+
+.parent-dashboard-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
