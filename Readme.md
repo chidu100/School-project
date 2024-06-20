@@ -1,7 +1,7 @@
 # Crestwood Academy Website and Admin Dashboard
  Visit the site [Crestwoodacademy](https://main--crestwoodacademy.netlify.app/)  
 
- You can also check this site if the other does not go through [Crestwoodacademy](https://school-project-g668jd3f6-chidu100s-projects.vercel.app/) 
+ You can also check this site if the other does not go through [Crestwoodacademy](https://school-project-snowy-two.vercel.app/) 
 
 ## Project Description
 
