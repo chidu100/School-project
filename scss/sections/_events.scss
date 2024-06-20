@@ -48,3 +48,9 @@
 .events-section .event p {
     text-align: justify;
 }
+
+@media (max-width: 767px) {
+    .event h3, .event p {
+        text-align: center;
+    }
+}

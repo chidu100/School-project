@@ -129,3 +129,96 @@ textarea {
     padding: 10px 30px;
     font-size: 1.2rem;
 }
+
+// Media Queries
+
+
+@media (min-width: 992px) {
+    .admin .form-row .admin-input-group {
+        width: calc(50% - 10px);
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .admin .form-row {
+        flex-direction: column;
+    }
+    .admin .form-row .admin-input-group {
+        width: 100%;
+    }
+    .login-container {
+        max-width: 80%;
+    }
+    .card-body {
+        padding: 30px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .admin .form-row {
+        flex-direction: column;
+    }
+    .admin .form-row .admin-input-group {
+        width: 100%;
+    }
+    .login-container {
+        max-width: 90%;
+    }
+    .card-body {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .admin .form-row {
+        flex-direction: column;
+    }
+    .admin .form-row .admin-input-group {
+        width: 100%;
+    }
+    .login-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .card-body {
+        padding: 10px;
+    }
+}
+
+// Media Queries
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .login-container {
+        max-width: 400px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .login-container {
+        max-width: 80%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .login-container {
+        max-width: 90%;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .login-container {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .btn-lg {
+        width: 100%; /* Make the button full-width */
+    }
+}
+
