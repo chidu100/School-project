@@ -11956,12 +11956,23 @@ textarea {
   resize: vertical;
 }
 
-.btn-block {
-  width: 60%;
+.thank-you-container {
+  margin-top: 50px;
 }
 
-.btn-rounded {
-  border-radius: 50px;
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1), 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 40px;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
 }
 
 .navbar-bg {
@@ -12086,12 +12097,8 @@ textarea {
   justify-content: center;
 }
 
-.hero-section h1 {
-  font-size: 4rem;
-}
-
 .hero-section p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .ambition {
